@@ -1,0 +1,22 @@
+{
+  "name": "audiovisual",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/audiovisual/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "test": {
+      "executor": "nx:run-commands",
+      "outputs": [],
+      "options": {
+        "command": "tsx --test tools/composition.spec.ts tools/production.spec.ts"
+      },
+      "cache": true,
+      "inputs": [
+        "default",
+        "{workspaceRoot}/tools/*.spec.ts",
+        "{workspaceRoot}/compositions/**/*.json"
+      ]
+    }
+  }
+}

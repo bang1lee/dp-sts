@@ -1,0 +1,347 @@
+{
+  "version": 1,
+  "id": "ambient-lab-synthesized-fire-kit-v1",
+  "sampleRate": 48000,
+  "origin": "original procedural synthesis; no field recording or external samples",
+  "description": "Synthesized soft firewood-like snaps and fine crackle texture",
+  "license": "project-original-not-publicly-licensed",
+  "generator": "tools/flower-fire-kit.py",
+  "files": [
+    {
+      "id": "ember01",
+      "file": "ember01.wav",
+      "sha256": "761f4bf69e95c306478b8043589fdf1fa199153231647377246f30ebd29f0bdd",
+      "frames": 9360,
+      "seed": 61031,
+      "parameters": {
+        "durationSeconds": 0.195,
+        "noiseBandHz": [
+          1150,
+          4250
+        ],
+        "secondaryFragments": [
+          {
+            "offsetSeconds": 0.06561,
+            "decaySeconds": 0.002111,
+            "strength": 0.047806
+          },
+          {
+            "offsetSeconds": 0.058652,
+            "decaySeconds": 0.003722,
+            "strength": 0.062557
+          },
+          {
+            "offsetSeconds": 0.013958,
+            "decaySeconds": 0.003437,
+            "strength": 0.08565
+          }
+        ],
+        "resonantModes": [
+          {
+            "frequencyHz": 692.562,
+            "decaySeconds": 0.019,
+            "amplitude": 0.09,
+            "phaseRadians": 3.688098
+          },
+          {
+            "frequencyHz": 1210.624,
+            "decaySeconds": 0.012,
+            "amplitude": 0.055,
+            "phaseRadians": 4.224993
+          },
+          {
+            "frequencyHz": 2685.113,
+            "decaySeconds": 0.007,
+            "amplitude": 0.035,
+            "phaseRadians": 3.774971
+          }
+        ]
+      }
+    },
+    {
+      "id": "ember02",
+      "file": "ember02.wav",
+      "sha256": "b4ea14fa636b3e4d237bbbe449af44d717cdbc370525a0bf3d9804012267893d",
+      "frames": 11280,
+      "seed": 61032,
+      "parameters": {
+        "durationSeconds": 0.235,
+        "noiseBandHz": [
+          800,
+          3650
+        ],
+        "secondaryFragments": [
+          {
+            "offsetSeconds": 0.039165,
+            "decaySeconds": 0.00481,
+            "strength": 0.030669
+          },
+          {
+            "offsetSeconds": 0.097664,
+            "decaySeconds": 0.002229,
+            "strength": 0.044378
+          },
+          {
+            "offsetSeconds": 0.044111,
+            "decaySeconds": 0.002351,
+            "strength": 0.049225
+          },
+          {
+            "offsetSeconds": 0.028832,
+            "decaySeconds": 0.003347,
+            "strength": 0.048376
+          },
+          {
+            "offsetSeconds": 0.065838,
+            "decaySeconds": 0.001566,
+            "strength": 0.029652
+          }
+        ],
+        "resonantModes": [
+          {
+            "frequencyHz": 632.11,
+            "decaySeconds": 0.019,
+            "amplitude": 0.09,
+            "phaseRadians": 5.021108
+          },
+          {
+            "frequencyHz": 1066.543,
+            "decaySeconds": 0.012,
+            "amplitude": 0.055,
+            "phaseRadians": 4.56603
+          },
+          {
+            "frequencyHz": 2683.288,
+            "decaySeconds": 0.007,
+            "amplitude": 0.035,
+            "phaseRadians": 2.895754
+          }
+        ]
+      }
+    },
+    {
+      "id": "ember03",
+      "file": "ember03.wav",
+      "sha256": "3a9698b54b34c7b69d51e9c57fc67196932ee292350e7a1feca1122f3c5d53fd",
+      "frames": 8064,
+      "seed": 61033,
+      "parameters": {
+        "durationSeconds": 0.168,
+        "noiseBandHz": [
+          1650,
+          5200
+        ],
+        "secondaryFragments": [
+          {
+            "offsetSeconds": 0.075989,
+            "decaySeconds": 0.003941,
+            "strength": 0.026131
+          },
+          {
+            "offsetSeconds": 0.046348,
+            "decaySeconds": 0.002652,
+            "strength": 0.067994
+          }
+        ],
+        "resonantModes": [
+          {
+            "frequencyHz": 645.74,
+            "decaySeconds": 0.019,
+            "amplitude": 0.09,
+            "phaseRadians": 3.838296
+          },
+          {
+            "frequencyHz": 1294.702,
+            "decaySeconds": 0.012,
+            "amplitude": 0.055,
+            "phaseRadians": 4.831397
+          },
+          {
+            "frequencyHz": 2647.699,
+            "decaySeconds": 0.007,
+            "amplitude": 0.035,
+            "phaseRadians": 6.020707
+          }
+        ]
+      }
+    },
+    {
+      "id": "ember04",
+      "file": "ember04.wav",
+      "sha256": "28bc6143372fd0f89bcc1d8b1bbe89d56d75812af58c775de0ac7dc12716a4c6",
+      "frames": 12480,
+      "seed": 61034,
+      "parameters": {
+        "durationSeconds": 0.26,
+        "noiseBandHz": [
+          920,
+          3150
+        ],
+        "secondaryFragments": [
+          {
+            "offsetSeconds": 0.093816,
+            "decaySeconds": 0.001669,
+            "strength": 0.016586
+          },
+          {
+            "offsetSeconds": 0.078479,
+            "decaySeconds": 0.004703,
+            "strength": 0.033134
+          },
+          {
+            "offsetSeconds": 0.103759,
+            "decaySeconds": 0.002175,
+            "strength": 0.036814
+          },
+          {
+            "offsetSeconds": 0.017949,
+            "decaySeconds": 0.003744,
+            "strength": 0.07542
+          },
+          {
+            "offsetSeconds": 0.057175,
+            "decaySeconds": 0.004605,
+            "strength": 0.064127
+          },
+          {
+            "offsetSeconds": 0.066141,
+            "decaySeconds": 0.002795,
+            "strength": 0.025165
+          }
+        ],
+        "resonantModes": [
+          {
+            "frequencyHz": 753.014,
+            "decaySeconds": 0.019,
+            "amplitude": 0.09,
+            "phaseRadians": 1.113823
+          },
+          {
+            "frequencyHz": 1193.742,
+            "decaySeconds": 0.012,
+            "amplitude": 0.055,
+            "phaseRadians": 0.233646
+          },
+          {
+            "frequencyHz": 2559.526,
+            "decaySeconds": 0.007,
+            "amplitude": 0.035,
+            "phaseRadians": 5.853839
+          }
+        ]
+      }
+    },
+    {
+      "id": "ember05",
+      "file": "ember05.wav",
+      "sha256": "5b7f101c962e0c794b3e7e0179ee5beed7bf68612605902304daa7cd202e4f21",
+      "frames": 9840,
+      "seed": 61035,
+      "parameters": {
+        "durationSeconds": 0.205,
+        "noiseBandHz": [
+          1300,
+          4800
+        ],
+        "secondaryFragments": [
+          {
+            "offsetSeconds": 0.083391,
+            "decaySeconds": 0.002328,
+            "strength": 0.023597
+          },
+          {
+            "offsetSeconds": 0.065299,
+            "decaySeconds": 0.004707,
+            "strength": 0.057803
+          },
+          {
+            "offsetSeconds": 0.061694,
+            "decaySeconds": 0.001955,
+            "strength": 0.043416
+          },
+          {
+            "offsetSeconds": 0.012351,
+            "decaySeconds": 0.001591,
+            "strength": 0.063447
+          }
+        ],
+        "resonantModes": [
+          {
+            "frequencyHz": 483.319,
+            "decaySeconds": 0.019,
+            "amplitude": 0.09,
+            "phaseRadians": 2.310211
+          },
+          {
+            "frequencyHz": 1149.018,
+            "decaySeconds": 0.012,
+            "amplitude": 0.055,
+            "phaseRadians": 0.299005
+          },
+          {
+            "frequencyHz": 2314.14,
+            "decaySeconds": 0.007,
+            "amplitude": 0.035,
+            "phaseRadians": 0.209769
+          }
+        ]
+      }
+    },
+    {
+      "id": "ember06",
+      "file": "ember06.wav",
+      "sha256": "abe6e18389b88efdf4e644d8602e02c6c7acb62712c59f41b764c5041b579701",
+      "frames": 10800,
+      "seed": 61036,
+      "parameters": {
+        "durationSeconds": 0.225,
+        "noiseBandHz": [
+          1030,
+          4000
+        ],
+        "secondaryFragments": [
+          {
+            "offsetSeconds": 0.037268,
+            "decaySeconds": 0.001585,
+            "strength": 0.045702
+          },
+          {
+            "offsetSeconds": 0.102946,
+            "decaySeconds": 0.004353,
+            "strength": 0.015497
+          },
+          {
+            "offsetSeconds": 0.0918,
+            "decaySeconds": 0.001788,
+            "strength": 0.025668
+          },
+          {
+            "offsetSeconds": 0.0738,
+            "decaySeconds": 0.004036,
+            "strength": 0.035693
+          }
+        ],
+        "resonantModes": [
+          {
+            "frequencyHz": 556.947,
+            "decaySeconds": 0.019,
+            "amplitude": 0.09,
+            "phaseRadians": 2.352797
+          },
+          {
+            "frequencyHz": 1410.592,
+            "decaySeconds": 0.012,
+            "amplitude": 0.055,
+            "phaseRadians": 2.076741
+          },
+          {
+            "frequencyHz": 2186.146,
+            "decaySeconds": 0.007,
+            "amplitude": 0.035,
+            "phaseRadians": 5.625161
+          }
+        ]
+      }
+    }
+  ]
+}

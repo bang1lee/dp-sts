@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "id": "ambient-lab-original-kit-v1",
+  "sampleRate": 48000,
+  "origin": "original-procedural-one-shots",
+  "license": "project-original-not-publicly-licensed",
+  "generator": "tools/recipe-film-kit.py",
+  "files": [
+    {
+      "id": "kick",
+      "file": "kick.wav",
+      "sha256": "a53a2101182053eddf356927f28336a54122d0b1bc807bb3aa3e38f4c688169d",
+      "frames": 15360,
+      "description": "Descending sine body with a short noise transient"
+    },
+    {
+      "id": "snare",
+      "file": "snare.wav",
+      "sha256": "93384de3665ad48ebcfe862c2d2f52542103c7027a5765ffb21a725b24a86bbe",
+      "frames": 12960,
+      "description": "Filtered noise with a decaying low tonal body"
+    },
+    {
+      "id": "hat",
+      "file": "hat.wav",
+      "sha256": "0f9fcf8cc2cbaf2186af4a684a0c637842eb0b41149574f82db21508ad42e75e",
+      "frames": 6240,
+      "description": "Short high-frequency noise and metallic tones"
+    },
+    {
+      "id": "rim",
+      "file": "rim.wav",
+      "sha256": "a59f0d3d7bb9ab5521370fa0319d15d19f3a9052fb7697fb80812f0eac5cbc00",
+      "frames": 8640,
+      "description": "Tuned wooden-metallic transient with a short noise burst"
+    }
+  ]
+}

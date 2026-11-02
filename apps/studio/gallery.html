@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#111a24" />
+    <title>dp-sts 작품 보관함</title>
+    <script type="module" src="/src/gallery.ts"></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/gallery.html" aria-label="dp-sts 작품 보관함 처음으로"><span class="brand-mark">d<span>·</span>s</span><span>dp-sts<br /><small>작품 보관함</small></span></a>
+      <div class="top-actions"><a class="studio-link" href="/">스튜디오</a><button class="refresh" type="button" id="refresh" aria-label="작품 목록 새로고침"><span aria-hidden="true">↻</span> 새로고침</button></div>
+    </header>
+    <main>
+      <section class="intro" aria-labelledby="page-title">
+        <div class="intro-copy"><p class="intro-kicker"><span class="pulse"></span> 만들어온 장면과 소리</p><h1 id="page-title">작품이 머무는<br /><span>하나의 보관함</span></h1><p class="intro-description">영상과 음악, 탐색의 흔적까지.<br />지나온 작업과 새로 만들어지는 순간을 함께 살펴보세요.</p><a href="#collection" class="intro-link">작품 둘러보기 <span aria-hidden="true">↓</span></a></div>
+        <button class="feature" type="button" id="feature" aria-label="구조라 작품 열기">
+          <img src="/artifact-media/runs/dp-sts-gujora-film-v01/cover.png" alt="구조라의 해안과 사람들을 흰 선으로 그린 원본 표지" fetchpriority="high" />
+          <div class="feature-shade"></div><div class="feature-text"><div><span>지금 이어지는 작업</span><strong>구조라의 장면</strong><small>빛과 선, 그리고 공간의 움직임</small></div><span class="feature-arrow" aria-hidden="true">↗</span></div>
+        </button>
+      </section>
+      <section class="archive" id="collection" aria-labelledby="collection-title">
+        <div class="archive-heading"><div><p class="section-kicker">아카이브</p><h2 id="collection-title">작품 둘러보기</h2><p>영상, 음원과 이미지를 작업별로 모았습니다.</p></div><div class="freshness"><span id="count">목록을 불러오는 중</span><small id="freshness">연결 중</small></div></div>
+        <div class="tools"><div class="filters" role="group" aria-label="작품 유형 필터"><button class="filter active" data-filter="all" aria-pressed="true">전체</button><button class="filter" data-filter="video" aria-pressed="false">영상</button><button class="filter" data-filter="audio" aria-pressed="false">음원</button><button class="filter" data-filter="image" aria-pressed="false">이미지</button><button class="filter" data-filter="review" aria-pressed="false">검수 기록</button></div><label class="search"><span aria-hidden="true">⌕</span><span class="sr-only">작품 검색</span><input id="search" type="search" placeholder="작품이나 파일 검색" autocomplete="off" /></label></div>
+        <div id="notice" class="notice" role="status" aria-live="polite"></div><div class="gallery" id="gallery"></div>
+        <div class="more-wrap"><button class="more-button" id="more" hidden>더 보기</button></div>
+      </section>
+    </main>
+    <footer><span>dp-sts 작품 보관함</span><span>지금까지의 작업을 한자리에</span></footer>
+    <dialog id="detail" aria-labelledby="detail-title"><div class="dialog-shell"><header class="dialog-head"><div><p id="detail-subtitle"></p><h2 id="detail-title"></h2></div><button class="close" id="close" aria-label="닫기">✕</button></header><div class="dialog-body"><section class="player-area" aria-label="작품 미리보기"><div id="player" class="player"></div><p class="player-caption" id="player-caption"></p></section><aside class="file-panel"><div class="file-panel-head"><h3>이 작업의 파일</h3><span id="file-count"></span></div><div id="files" class="files"></div><button id="more-files" class="more-files" hidden>파일 더 보기</button><section id="review-section" class="reviews" hidden><h3>검수 기록</h3><div id="reviews"></div></section></aside></div></div></dialog>
+  </body>
+</html>

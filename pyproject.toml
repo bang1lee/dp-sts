@@ -1,0 +1,15 @@
+[project]
+name = "ambient-lab"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = []
+
+[tool.uv.workspace]
+members = [
+    "python/media",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.17.3",
+]

@@ -1,0 +1,254 @@
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #e2e9df;
+  background: #101713;
+  font-synthesis: none;
+  color-scheme: dark;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+main {
+  max-width: 1240px;
+  margin: auto;
+  padding: 32px 48px;
+}
+header,
+footer,
+.heading,
+.stage-caption,
+.transport {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header {
+  border-bottom: 1px solid #3a493f;
+  padding-bottom: 26px;
+}
+.wordmark {
+  font-size: 16px;
+  letter-spacing: 0.15em;
+  color: inherit;
+  text-decoration: none;
+  font-weight: 700;
+}
+.wordmark span {
+  display: block;
+  margin-top: 8px;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  color: #a1b5a7;
+}
+.badge {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  border: 1px solid #536b59;
+  padding: 9px 13px;
+  border-radius: 20px;
+}
+.heading {
+  margin: 58px 0 32px;
+}
+.eyebrow {
+  color: #bdce96;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  font-weight: 700;
+}
+h1 {
+  font-family: Georgia, serif;
+  font-weight: 400;
+  font-size: clamp(44px, 6vw, 80px);
+  letter-spacing: -0.04em;
+  margin: 12px 0 0;
+}
+.intro {
+  line-height: 1.6;
+  font-size: 15px;
+  color: #acbdb0;
+}
+.stage {
+  position: relative;
+  border: 1px solid #405448;
+  background: #071519;
+  overflow: hidden;
+}
+canvas {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: contain;
+}
+.stage-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 18px 22px;
+  background: linear-gradient(transparent, #07110c);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  color: #e2e9df;
+}
+.transport {
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 24px 0;
+  border-bottom: 1px solid #3a493f;
+}
+.actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+button {
+  font: inherit;
+  font-size: 12px;
+  border: 1px solid #667c68;
+  border-radius: 4px;
+  background: transparent;
+  color: #e2e9df;
+  padding: 12px 17px;
+  cursor: pointer;
+}
+button:first-child#prepare {
+  background: #c8dba0;
+  color: #182211;
+  border-color: #c8dba0;
+}
+button:hover:enabled {
+  background: #344b38;
+}
+button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+button:focus-visible,
+textarea:focus-visible,
+a:focus-visible {
+  outline: 2px solid #d7e7ad;
+  outline-offset: 4px;
+}
+.metadata {
+  font-size: 11px;
+  color: #b2c2b5;
+}
+#status {
+  flex-basis: 100%;
+  font-size: 12px;
+  color: #b5c8ba;
+  line-height: 1.6;
+  margin: 4px 0 0;
+  min-height: 20px;
+}
+.workspace {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 80px;
+  margin: 54px 0 64px;
+}
+h2 {
+  font:
+    400 36px/1.15 Georgia,
+    serif;
+  letter-spacing: -0.025em;
+}
+.notes p:not(.eyebrow) {
+  font-size: 13px;
+  line-height: 1.8;
+  color: #b5c8ba;
+  max-width: 360px;
+}
+code {
+  display: block;
+  padding: 16px;
+  background: #1a261e;
+  border-left: 2px solid #a5bd82;
+  font-size: 11px;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+.fine {
+  font-size: 11px !important;
+}
+.editor label {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  color: #c7d3c9;
+  margin: 0 0 14px;
+}
+textarea {
+  width: 100%;
+  height: 440px;
+  resize: vertical;
+  padding: 20px;
+  background: #0c120e;
+  border: 1px solid #3d5041;
+  border-radius: 4px;
+  color: #c8dba0;
+  font:
+    12px/1.65 ui-monospace,
+    monospace;
+}
+.editor p {
+  font-size: 11px;
+  line-height: 1.6;
+  color: #a8b9ad;
+}
+footer {
+  border-top: 1px solid #3a493f;
+  padding: 24px 0;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  color: #a4b5a8;
+  gap: 20px;
+}
+@media (max-width: 700px) {
+  main {
+    padding: 20px;
+  }
+  .badge {
+    display: none;
+  }
+  .heading {
+    align-items: flex-start;
+    margin-top: 36px;
+    gap: 20px;
+  }
+  .intro {
+    font-size: 12px;
+  }
+  .workspace {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    margin: 32px 0;
+  }
+  .stage-caption {
+    font-size: 8px;
+    padding: 12px;
+  }
+  button {
+    padding: 12px;
+    font-size: 11px;
+  }
+  .metadata {
+    margin: 0;
+  }
+  h2 {
+    font-size: 30px;
+  }
+  textarea {
+    height: 350px;
+  }
+  footer {
+    font-size: 8px;
+  }
+  .wordmark span {
+    font-size: 8px;
+  }
+}

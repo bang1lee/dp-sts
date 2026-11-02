@@ -1,0 +1,42 @@
+{
+  "version": 2,
+  "source": "generated",
+  "music": {
+    "mood": "mysterious",
+    "root": 50,
+    "bpm": 73.2085240142375,
+    "sparsity": 0.897198853656282,
+    "duration": 89.4332732399575,
+    "gain": 0.216927059258574
+  },
+  "visual": {
+    "mode": "mandelbulb",
+    "depth": 1,
+    "density": 0.929562383612663,
+    "bloom": 0.8880353817504659,
+    "connection": 1,
+    "scale": 0.777327746741155,
+    "motion": 0.622206703910615,
+    "response": 0.806145251396648
+  },
+  "workflow": {
+    "music": "sardine",
+    "visual": "hydra",
+    "notation": "verovio",
+    "input": "opencv",
+    "mappings": [
+      {
+        "source": "motion",
+        "target": "noteDensity"
+      },
+      {
+        "source": "brightness",
+        "target": "timbre"
+      },
+      {
+        "source": "motion",
+        "target": "noteDensity"
+      }
+    ]
+  }
+}

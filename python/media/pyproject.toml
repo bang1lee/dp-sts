@@ -1,0 +1,18 @@
+[project]
+name = "ambient-media"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy>=2.5.4",
+    "opencv-python-headless>=5.0.0.93",
+    "scipy>=1.18.1",
+]
+
+[project.scripts]
+ambient-media = "ambient_media:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

@@ -1,0 +1,7 @@
+# Storm visual fields — design notes
+
+Seven procedural fields share a 180-second envelope and measured low, mid and high audio bands, but use distinct geometries and palettes. Canopy Melt combines warped pigment pools and fine reflected edges; Coral Vortex uses scalloped spiral shells; Glacier Veins uses long ice shelves; Mycelium Choir uses fine suspended filaments; Mineral Memory uses broad sedimentary strata; Neon Abyss uses luminous nested tunnel bands; Acid Bloom uses an angular recursive flower.
+
+The slow `opening`, `emergence`, and `release` curves overlap across the piece. They gently alter scale, material or light, with no section cuts. The audio bands are bounded to 0–1. Bass moves the glacier and mineral contours and slightly expands the flower; midrange shapes filament width and tunnel light; high frequencies lift fine highlights. Small gains aim to retain visual continuity as the music changes. The common fade and tone mapping remain in the shader; feedback and any additional modulation are handled by the renderer.
+
+The tunnel is constructed from broad logarithmic radial waves and five scales of folded circle and axis traps. Every angular harmonic is integer-valued so the `atan` branch closes continuously; its center is darkened to suppress the singularity. The flower and filament structures retain their existing distinct identities. These are design intentions; a preview and full-duration review are still required to establish visual quality, stability, and render speed.

@@ -1,0 +1,267 @@
+{
+  "name": "media",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "python/media/src",
+  "tags": [
+    "language:python"
+  ],
+  "targets": {
+    "gujora-climax-audio": {
+      "cache": false,
+      "executor": "nx:run-commands",
+      "options": { "command": "uv run --locked --package ambient-media python -m ambient_media.gujora_climax_audio" }
+    },
+    "gujora-climax-render": {
+      "cache": false,
+      "executor": "nx:run-commands",
+      "options": { "command": "pnpm exec node tools/gujora-climax.mjs" }
+    },
+    "gujora-climax-verify": {
+      "cache": false,
+      "executor": "nx:run-commands",
+      "options": { "command": "uv run --locked --package ambient-media python -m ambient_media.gujora_climax_verify" }
+    },
+    "gujora-climax-stills": {
+      "cache": false,
+      "executor": "nx:run-commands",
+      "options": { "command": "pnpm exec node tools/gujora-climax.mjs --stills-only --out=runs/dp-sts-gujora-climax-stills-v01" }
+    },
+    "gujora-spatial-score": {
+      "cache": false,
+      "executor": "nx:run-commands",
+      "options": { "command": "pnpm exec node tools/gujora-spatial-score.mjs" }
+    },
+    "gujora-spatial-audio": {
+      "cache": false,
+      "executor": "nx:run-commands",
+      "options": { "command": "uv run --locked --package ambient-media python -m ambient_media.gujora_spatial_audio" }
+    },
+    "gujora-spatial-render": {
+      "cache": false,
+      "executor": "nx:run-commands",
+      "options": { "command": "pnpm exec node tools/gujora-spatial.mjs" }
+    },
+    "gujora-spatial-verify": {
+      "cache": false,
+      "executor": "nx:run-commands",
+      "options": { "command": "uv run --locked --package ambient-media python -m ambient_media.gujora_spatial_verify" }
+    },
+    "gujora-ambient-score": {
+      "cache": false,
+      "executor": "nx:run-commands",
+      "options": { "command": "pnpm exec node tools/gujora-ambient-score.mjs" }
+    },
+    "gujora-ambient-audio": {
+      "cache": false,
+      "executor": "nx:run-commands",
+      "options": { "command": "uv run --locked --package ambient-media python -m ambient_media.gujora_ambient" }
+    },
+    "gujora-particles": {
+      "cache": false,
+      "executor": "nx:run-commands",
+      "options": { "command": "pnpm exec node tools/gujora-particles.mjs" }
+    },
+    "gujora-particles-verify": {
+      "cache": false,
+      "executor": "nx:run-commands",
+      "options": { "command": "uv run --locked --package ambient-media python -m ambient_media.gujora_particles_verify" }
+    },
+    "gujora-film": {
+      "cache": false,
+      "executor": "nx:run-commands",
+      "options": { "command": "pnpm exec node tools/gujora-film.mjs" }
+    },
+    "gujora-verify": {
+      "cache": false,
+      "executor": "nx:run-commands",
+      "options": { "command": "uv run --locked --package ambient-media python -m ambient_media.gujora_verify" }
+    },
+    "storm-delivery": {
+      "cache": false,
+      "executor": "nx:run-commands",
+      "options": { "command": "uv run --locked --package ambient-media python -m ambient_media.storm_delivery" }
+    },
+    "storm-prepare": {
+      "cache": false,
+      "executor": "nx:run-commands",
+      "options": { "command": "uv run --locked --package ambient-media python -m ambient_media.visual_storm" }
+    },
+    "storm-render": {
+      "cache": false,
+      "executor": "nx:run-commands",
+      "options": { "command": "pnpm exec node tools/storm-render.mjs" }
+    },
+    "psy-verify": {
+      "cache": false,
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "uv run --locked --package ambient-media python -m ambient_media.psy_verify"
+      }
+    },
+    "psy-score": {
+      "cache": false,
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm exec node tools/psy-score.mjs"
+      }
+    },
+    "psy-audio": {
+      "cache": false,
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "uv run --locked --package ambient-media python -m ambient_media.psy_audio"
+      }
+    },
+    "psy-visual": {
+      "cache": false,
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "uv run --locked --package ambient-media python -m ambient_media.psy_visual"
+      }
+    },
+    "yunseul": {
+      "cache": false,
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "uv run --locked --package ambient-media python -m ambient_media.yunseul"
+      }
+    },
+    "doctor": {
+      "cache": false,
+      "executor": "nx:run-commands",
+      "outputs": [],
+      "options": {
+        "command": "uv run --locked --package ambient-media ambient-media doctor"
+      }
+    },
+    "lint": {
+      "cache": true,
+      "inputs": [
+        "default",
+        "{workspaceRoot}/pyproject.toml",
+        "{workspaceRoot}/uv.lock",
+        "{workspaceRoot}/.python-version"
+      ],
+      "executor": "nx:run-commands",
+      "outputs": [],
+      "options": {
+        "command": "uv run --locked ruff check python/media"
+      }
+    },
+    "build": {
+      "cache": true,
+      "inputs": [
+        "default",
+        "{workspaceRoot}/pyproject.toml",
+        "{workspaceRoot}/uv.lock",
+        "{workspaceRoot}/.python-version"
+      ],
+      "executor": "nx:run-commands",
+      "outputs": [
+        "{projectRoot}/dist"
+      ],
+      "options": {
+        "command": "uv build --package ambient-media --out-dir python/media/dist"
+      }
+    },
+    "verify": {
+      "executor": "nx:run-commands",
+      "outputs": [],
+      "options": {
+        "command": "uv run --locked --package ambient-media ambient-media verify"
+      }
+    },
+    "test": {
+      "executor": "nx:run-commands",
+      "outputs": [],
+      "options": {
+        "command": "uv run --locked --package ambient-media python -m unittest discover -s python/media/tests -v"
+      },
+      "cache": true,
+      "inputs": [
+        "default",
+        "{workspaceRoot}/pyproject.toml",
+        "{workspaceRoot}/uv.lock",
+        "{workspaceRoot}/.python-version"
+      ]
+    },
+    "body-flow": {
+      "cache": false,
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "uv run --locked --package ambient-media python -m ambient_media.body_flow"
+      }
+    },
+    "moonwater-score": {
+      "cache": false,
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm exec node tools/moonwater-score.mjs"
+      }
+    },
+    "moonwater": {
+      "cache": false,
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "uv run --locked --package ambient-media python -m ambient_media.moonwater"
+      }
+    },
+    "moonwater-melody": {
+      "cache": false,
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "uv run --locked --package ambient-media python -m ambient_media.moonwater_melody"
+      }
+    },
+    "hydra-score": {
+      "cache": false,
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm exec node tools/hydra-score.mjs"
+      }
+    },
+    "hydra-features": {
+      "cache": false,
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "uv run --locked --package ambient-media python -m ambient_media.hydra_features"
+      }
+    },
+    "hydra-render": {
+      "cache": false,
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm exec node tools/hydra-render.mjs"
+      }
+    },
+    "vapor-score": {
+      "cache": false,
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm exec node tools/vapor-score.mjs"
+      }
+    },
+    "vapor": {
+      "cache": false,
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "uv run --locked --package ambient-media python -m ambient_media.vapor_orchestra"
+      }
+    },
+    "bloom-score": {
+      "cache": false,
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "pnpm exec node tools/bloom-score.mjs"
+      }
+    },
+    "bloom-audio": {
+      "cache": false,
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "uv run --locked --package ambient-media python -m ambient_media.folktronica_bloom"
+      }
+    }
+  }
+}

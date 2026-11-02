@@ -1,0 +1,3162 @@
+{
+  "title": "dp-sts — moonwater",
+  "duration": 600,
+  "bpm": 48,
+  "seed": 20261102,
+  "method": "Actual Strudel note(mini(expression)).queryArc; Python offline timbres",
+  "sections": [
+    {
+      "start": 0,
+      "end": 90,
+      "name": "Immersion"
+    },
+    {
+      "start": 90,
+      "end": 210,
+      "name": "Moon encounter"
+    },
+    {
+      "start": 210,
+      "end": 360,
+      "name": "Refraction"
+    },
+    {
+      "start": 360,
+      "end": 480,
+      "name": "Connection"
+    },
+    {
+      "start": 480,
+      "end": 600,
+      "name": "One surface"
+    }
+  ],
+  "patterns": [
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 20,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 25,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 30,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 40,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 45,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 50,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 55,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 60,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 65,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 70,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 80,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 85,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 90,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 95,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 100,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 105,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 110,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 120,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 125,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 130,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 135,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 140,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 145,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 150,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 160,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 165,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 170,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 175,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 180,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 185,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 190,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 200,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 205,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 210,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 215,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 220,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 225,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 230,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 240,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 245,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 250,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 255,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 260,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 265,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 270,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 280,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 285,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 290,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 295,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 300,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 305,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 310,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 320,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 325,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 330,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 335,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 340,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 345,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 350,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 360,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 365,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 370,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 375,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 380,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 385,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 390,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 400,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 405,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 410,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 415,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 420,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 425,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 430,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 440,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 445,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 450,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 455,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 460,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 465,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 470,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 480,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 485,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 490,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 495,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 500,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 505,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 510,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 520,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 525,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 530,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 535,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 540,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 545,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 550,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 560,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 565,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 570,
+      "cycle": 5
+    },
+    {
+      "track": "pulse",
+      "expression": "38 ~ 38 ~",
+      "start": 575,
+      "cycle": 5
+    },
+    {
+      "track": "tide",
+      "expression": "[38,45,52]",
+      "start": 0,
+      "cycle": 40
+    },
+    {
+      "track": "tide",
+      "expression": "[38,45,52]",
+      "start": 40,
+      "cycle": 40
+    },
+    {
+      "track": "tide",
+      "expression": "[45,52,59]",
+      "start": 80,
+      "cycle": 40
+    },
+    {
+      "track": "tide",
+      "expression": "[41,48,55]",
+      "start": 120,
+      "cycle": 40
+    },
+    {
+      "track": "tide",
+      "expression": "[38,45,52]",
+      "start": 160,
+      "cycle": 40
+    },
+    {
+      "track": "tide",
+      "expression": "[43,50,57]",
+      "start": 200,
+      "cycle": 40
+    },
+    {
+      "track": "tide",
+      "expression": "[45,52,59]",
+      "start": 240,
+      "cycle": 40
+    },
+    {
+      "track": "tide",
+      "expression": "[41,48,55]",
+      "start": 280,
+      "cycle": 40
+    },
+    {
+      "track": "tide",
+      "expression": "[43,50,57]",
+      "start": 320,
+      "cycle": 40
+    },
+    {
+      "track": "tide",
+      "expression": "[45,52,59]",
+      "start": 360,
+      "cycle": 40
+    },
+    {
+      "track": "tide",
+      "expression": "[38,45,52]",
+      "start": 400,
+      "cycle": 40
+    },
+    {
+      "track": "tide",
+      "expression": "[38,45,52]",
+      "start": 440,
+      "cycle": 40
+    },
+    {
+      "track": "tide",
+      "expression": "[38,45,52]",
+      "start": 480,
+      "cycle": 40
+    },
+    {
+      "track": "tide",
+      "expression": "[38,45,52]",
+      "start": 520,
+      "cycle": 40
+    },
+    {
+      "track": "tide",
+      "expression": "[38,45,52]",
+      "start": 560,
+      "cycle": 40
+    },
+    {
+      "track": "glint",
+      "expression": "74",
+      "start": 25,
+      "cycle": 15.2
+    },
+    {
+      "track": "glint",
+      "expression": "81",
+      "start": 40.2,
+      "cycle": 15.2
+    },
+    {
+      "track": "glint",
+      "expression": "74",
+      "start": 55.4,
+      "cycle": 15.2
+    },
+    {
+      "track": "glint",
+      "expression": "81",
+      "start": 70.6,
+      "cycle": 15.2
+    },
+    {
+      "track": "glint",
+      "expression": "74",
+      "start": 85.8,
+      "cycle": 15.2
+    },
+    {
+      "track": "glint",
+      "expression": "81",
+      "start": 101,
+      "cycle": 15.2
+    },
+    {
+      "track": "glint",
+      "expression": "74",
+      "start": 116.19999999999999,
+      "cycle": 15.2
+    },
+    {
+      "track": "glint",
+      "expression": "81",
+      "start": 131.39999999999998,
+      "cycle": 15.2
+    },
+    {
+      "track": "glint",
+      "expression": "74",
+      "start": 146.6,
+      "cycle": 15.2
+    },
+    {
+      "track": "glint",
+      "expression": "81",
+      "start": 161.79999999999998,
+      "cycle": 15.2
+    },
+    {
+      "track": "glint",
+      "expression": "81",
+      "start": 177,
+      "cycle": 15.2
+    },
+    {
+      "track": "glint",
+      "expression": "84",
+      "start": 192.2,
+      "cycle": 15.2
+    },
+    {
+      "track": "glint",
+      "expression": "74",
+      "start": 207.39999999999998,
+      "cycle": 15.2
+    },
+    {
+      "track": "glint",
+      "expression": "77",
+      "start": 222.6,
+      "cycle": 15.2
+    },
+    {
+      "track": "glint",
+      "expression": "81",
+      "start": 237.79999999999998,
+      "cycle": 15.2
+    },
+    {
+      "track": "glint",
+      "expression": "84",
+      "start": 253,
+      "cycle": 15.2
+    },
+    {
+      "track": "glint",
+      "expression": "74",
+      "start": 268.2,
+      "cycle": 15.2
+    },
+    {
+      "track": "glint",
+      "expression": "77",
+      "start": 283.4,
+      "cycle": 15.2
+    },
+    {
+      "track": "glint",
+      "expression": "81",
+      "start": 298.59999999999997,
+      "cycle": 15.2
+    },
+    {
+      "track": "glint",
+      "expression": "84",
+      "start": 313.8,
+      "cycle": 15.2
+    },
+    {
+      "track": "glint",
+      "expression": "74",
+      "start": 329,
+      "cycle": 15.2
+    },
+    {
+      "track": "glint",
+      "expression": "77",
+      "start": 344.2,
+      "cycle": 15.2
+    },
+    {
+      "track": "glint",
+      "expression": "81",
+      "start": 359.4,
+      "cycle": 15.2
+    },
+    {
+      "track": "glint",
+      "expression": "84",
+      "start": 374.59999999999997,
+      "cycle": 15.2
+    },
+    {
+      "track": "glint",
+      "expression": "74",
+      "start": 389.79999999999995,
+      "cycle": 15.2
+    },
+    {
+      "track": "glint",
+      "expression": "81",
+      "start": 405,
+      "cycle": 15.2
+    },
+    {
+      "track": "glint",
+      "expression": "74",
+      "start": 420.2,
+      "cycle": 15.2
+    },
+    {
+      "track": "glint",
+      "expression": "81",
+      "start": 435.4,
+      "cycle": 15.2
+    },
+    {
+      "track": "glint",
+      "expression": "74",
+      "start": 450.59999999999997,
+      "cycle": 15.2
+    },
+    {
+      "track": "glint",
+      "expression": "81",
+      "start": 465.79999999999995,
+      "cycle": 15.2
+    },
+    {
+      "track": "glint",
+      "expression": "74",
+      "start": 481,
+      "cycle": 15.2
+    },
+    {
+      "track": "glint",
+      "expression": "81",
+      "start": 496.2,
+      "cycle": 15.2
+    },
+    {
+      "track": "glint",
+      "expression": "74",
+      "start": 511.4,
+      "cycle": 15.2
+    },
+    {
+      "track": "glint",
+      "expression": "81",
+      "start": 526.5999999999999,
+      "cycle": 15.2
+    },
+    {
+      "track": "glint",
+      "expression": "74",
+      "start": 541.8,
+      "cycle": 15.2
+    },
+    {
+      "track": "glint",
+      "expression": "81",
+      "start": 557,
+      "cycle": 15.2
+    },
+    {
+      "track": "glint",
+      "expression": "74",
+      "start": 572.1999999999999,
+      "cycle": 15.2
+    }
+  ],
+  "events": [
+    {
+      "track": "tide",
+      "note": 38,
+      "t": 0,
+      "duration": 70,
+      "velocity": 0.025,
+      "pan": 0
+    },
+    {
+      "track": "tide",
+      "note": 45,
+      "t": 0,
+      "duration": 70,
+      "velocity": 0.025,
+      "pan": 0
+    },
+    {
+      "track": "tide",
+      "note": 52,
+      "t": 0,
+      "duration": 70,
+      "velocity": 0.025,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 20,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 22.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 25,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "glint",
+      "note": 74,
+      "t": 25,
+      "duration": 15,
+      "velocity": 0.012,
+      "pan": -0.45
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 27.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 30,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 32.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 40,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "tide",
+      "note": 38,
+      "t": 40,
+      "duration": 70,
+      "velocity": 0.025,
+      "pan": 0
+    },
+    {
+      "track": "tide",
+      "note": 45,
+      "t": 40,
+      "duration": 70,
+      "velocity": 0.025,
+      "pan": 0
+    },
+    {
+      "track": "tide",
+      "note": 52,
+      "t": 40,
+      "duration": 70,
+      "velocity": 0.025,
+      "pan": 0
+    },
+    {
+      "track": "glint",
+      "note": 81,
+      "t": 40.2,
+      "duration": 15,
+      "velocity": 0.012,
+      "pan": 0.45
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 42.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 45,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 47.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 50,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 52.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 55,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "glint",
+      "note": 74,
+      "t": 55.4,
+      "duration": 15,
+      "velocity": 0.012,
+      "pan": -0.45
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 57.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 60,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 62.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 65,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 67.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 70,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "glint",
+      "note": 81,
+      "t": 70.6,
+      "duration": 15,
+      "velocity": 0.012,
+      "pan": 0.45
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 72.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 80,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "tide",
+      "note": 45,
+      "t": 80,
+      "duration": 70,
+      "velocity": 0.025,
+      "pan": 0
+    },
+    {
+      "track": "tide",
+      "note": 52,
+      "t": 80,
+      "duration": 70,
+      "velocity": 0.025,
+      "pan": 0
+    },
+    {
+      "track": "tide",
+      "note": 59,
+      "t": 80,
+      "duration": 70,
+      "velocity": 0.025,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 82.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 85,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "glint",
+      "note": 74,
+      "t": 85.8,
+      "duration": 15,
+      "velocity": 0.012,
+      "pan": -0.45
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 87.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 90,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 92.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 95,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 97.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 100,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "glint",
+      "note": 81,
+      "t": 101,
+      "duration": 15,
+      "velocity": 0.012,
+      "pan": 0.45
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 102.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 105,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 107.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 110,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 112.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "glint",
+      "note": 74,
+      "t": 116.19999999999999,
+      "duration": 15,
+      "velocity": 0.012,
+      "pan": -0.45
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 120,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "tide",
+      "note": 41,
+      "t": 120,
+      "duration": 70,
+      "velocity": 0.025,
+      "pan": 0
+    },
+    {
+      "track": "tide",
+      "note": 48,
+      "t": 120,
+      "duration": 70,
+      "velocity": 0.025,
+      "pan": 0
+    },
+    {
+      "track": "tide",
+      "note": 55,
+      "t": 120,
+      "duration": 70,
+      "velocity": 0.025,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 122.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 125,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 127.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 130,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "glint",
+      "note": 81,
+      "t": 131.39999999999998,
+      "duration": 15,
+      "velocity": 0.012,
+      "pan": 0.45
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 132.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 135,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 137.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 140,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 142.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 145,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "glint",
+      "note": 74,
+      "t": 146.6,
+      "duration": 15,
+      "velocity": 0.012,
+      "pan": -0.45
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 147.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 150,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 152.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 160,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "tide",
+      "note": 38,
+      "t": 160,
+      "duration": 70,
+      "velocity": 0.025,
+      "pan": 0
+    },
+    {
+      "track": "tide",
+      "note": 45,
+      "t": 160,
+      "duration": 70,
+      "velocity": 0.025,
+      "pan": 0
+    },
+    {
+      "track": "tide",
+      "note": 52,
+      "t": 160,
+      "duration": 70,
+      "velocity": 0.025,
+      "pan": 0
+    },
+    {
+      "track": "glint",
+      "note": 81,
+      "t": 161.79999999999998,
+      "duration": 15,
+      "velocity": 0.012,
+      "pan": 0.45
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 162.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 165,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 167.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 170,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 172.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 175,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "glint",
+      "note": 81,
+      "t": 177,
+      "duration": 15,
+      "velocity": 0.012,
+      "pan": -0.45
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 177.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 180,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 182.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 185,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 187.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 190,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "glint",
+      "note": 84,
+      "t": 192.2,
+      "duration": 15,
+      "velocity": 0.012,
+      "pan": 0.45
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 192.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 200,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "tide",
+      "note": 43,
+      "t": 200,
+      "duration": 70,
+      "velocity": 0.025,
+      "pan": 0
+    },
+    {
+      "track": "tide",
+      "note": 50,
+      "t": 200,
+      "duration": 70,
+      "velocity": 0.025,
+      "pan": 0
+    },
+    {
+      "track": "tide",
+      "note": 57,
+      "t": 200,
+      "duration": 70,
+      "velocity": 0.025,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 202.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 205,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "glint",
+      "note": 74,
+      "t": 207.39999999999998,
+      "duration": 15,
+      "velocity": 0.012,
+      "pan": -0.45
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 207.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 210,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 212.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 215,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 217.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 220,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 222.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "glint",
+      "note": 77,
+      "t": 222.6,
+      "duration": 15,
+      "velocity": 0.012,
+      "pan": 0.45
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 225,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 227.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 230,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 232.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "glint",
+      "note": 81,
+      "t": 237.79999999999998,
+      "duration": 15,
+      "velocity": 0.012,
+      "pan": -0.45
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 240,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "tide",
+      "note": 45,
+      "t": 240,
+      "duration": 70,
+      "velocity": 0.025,
+      "pan": 0
+    },
+    {
+      "track": "tide",
+      "note": 52,
+      "t": 240,
+      "duration": 70,
+      "velocity": 0.025,
+      "pan": 0
+    },
+    {
+      "track": "tide",
+      "note": 59,
+      "t": 240,
+      "duration": 70,
+      "velocity": 0.025,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 242.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 245,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 247.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 250,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 252.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "glint",
+      "note": 84,
+      "t": 253,
+      "duration": 15,
+      "velocity": 0.012,
+      "pan": 0.45
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 255,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 257.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 260,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 262.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 265,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 267.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "glint",
+      "note": 74,
+      "t": 268.2,
+      "duration": 15,
+      "velocity": 0.012,
+      "pan": -0.45
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 270,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 272.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 280,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "tide",
+      "note": 41,
+      "t": 280,
+      "duration": 70,
+      "velocity": 0.025,
+      "pan": 0
+    },
+    {
+      "track": "tide",
+      "note": 48,
+      "t": 280,
+      "duration": 70,
+      "velocity": 0.025,
+      "pan": 0
+    },
+    {
+      "track": "tide",
+      "note": 55,
+      "t": 280,
+      "duration": 70,
+      "velocity": 0.025,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 282.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "glint",
+      "note": 77,
+      "t": 283.4,
+      "duration": 15,
+      "velocity": 0.012,
+      "pan": 0.45
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 285,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 287.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 290,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 292.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 295,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 297.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "glint",
+      "note": 81,
+      "t": 298.59999999999997,
+      "duration": 15,
+      "velocity": 0.012,
+      "pan": -0.45
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 300,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 302.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 305,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 307.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 310,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 312.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "glint",
+      "note": 84,
+      "t": 313.8,
+      "duration": 15,
+      "velocity": 0.012,
+      "pan": 0.45
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 320,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "tide",
+      "note": 43,
+      "t": 320,
+      "duration": 70,
+      "velocity": 0.025,
+      "pan": 0
+    },
+    {
+      "track": "tide",
+      "note": 50,
+      "t": 320,
+      "duration": 70,
+      "velocity": 0.025,
+      "pan": 0
+    },
+    {
+      "track": "tide",
+      "note": 57,
+      "t": 320,
+      "duration": 70,
+      "velocity": 0.025,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 322.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 325,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 327.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "glint",
+      "note": 74,
+      "t": 329,
+      "duration": 15,
+      "velocity": 0.012,
+      "pan": -0.45
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 330,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 332.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 335,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 337.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 340,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 342.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "glint",
+      "note": 77,
+      "t": 344.2,
+      "duration": 15,
+      "velocity": 0.012,
+      "pan": 0.45
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 345,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 347.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 350,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 352.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "glint",
+      "note": 81,
+      "t": 359.4,
+      "duration": 15,
+      "velocity": 0.012,
+      "pan": -0.45
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 360,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "tide",
+      "note": 45,
+      "t": 360,
+      "duration": 70,
+      "velocity": 0.025,
+      "pan": 0
+    },
+    {
+      "track": "tide",
+      "note": 52,
+      "t": 360,
+      "duration": 70,
+      "velocity": 0.025,
+      "pan": 0
+    },
+    {
+      "track": "tide",
+      "note": 59,
+      "t": 360,
+      "duration": 70,
+      "velocity": 0.025,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 362.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 365,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 367.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 370,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 372.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "glint",
+      "note": 84,
+      "t": 374.59999999999997,
+      "duration": 15,
+      "velocity": 0.012,
+      "pan": 0.45
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 375,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 377.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 380,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 382.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 385,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 387.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "glint",
+      "note": 74,
+      "t": 389.79999999999995,
+      "duration": 15,
+      "velocity": 0.012,
+      "pan": -0.45
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 390,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 392.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 400,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "tide",
+      "note": 38,
+      "t": 400,
+      "duration": 70,
+      "velocity": 0.025,
+      "pan": 0
+    },
+    {
+      "track": "tide",
+      "note": 45,
+      "t": 400,
+      "duration": 70,
+      "velocity": 0.025,
+      "pan": 0
+    },
+    {
+      "track": "tide",
+      "note": 52,
+      "t": 400,
+      "duration": 70,
+      "velocity": 0.025,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 402.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 405,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "glint",
+      "note": 81,
+      "t": 405,
+      "duration": 15,
+      "velocity": 0.012,
+      "pan": 0.45
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 407.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 410,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 412.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 415,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 417.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 420,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "glint",
+      "note": 74,
+      "t": 420.2,
+      "duration": 15,
+      "velocity": 0.012,
+      "pan": -0.45
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 422.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 425,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 427.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 430,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 432.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "glint",
+      "note": 81,
+      "t": 435.4,
+      "duration": 15,
+      "velocity": 0.012,
+      "pan": 0.45
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 440,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "tide",
+      "note": 38,
+      "t": 440,
+      "duration": 70,
+      "velocity": 0.025,
+      "pan": 0
+    },
+    {
+      "track": "tide",
+      "note": 45,
+      "t": 440,
+      "duration": 70,
+      "velocity": 0.025,
+      "pan": 0
+    },
+    {
+      "track": "tide",
+      "note": 52,
+      "t": 440,
+      "duration": 70,
+      "velocity": 0.025,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 442.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 445,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 447.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 450,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "glint",
+      "note": 74,
+      "t": 450.59999999999997,
+      "duration": 15,
+      "velocity": 0.012,
+      "pan": -0.45
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 452.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 455,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 457.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 460,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 462.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 465,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "glint",
+      "note": 81,
+      "t": 465.79999999999995,
+      "duration": 15,
+      "velocity": 0.012,
+      "pan": 0.45
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 467.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 470,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 472.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 480,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "tide",
+      "note": 38,
+      "t": 480,
+      "duration": 70,
+      "velocity": 0.025,
+      "pan": 0
+    },
+    {
+      "track": "tide",
+      "note": 45,
+      "t": 480,
+      "duration": 70,
+      "velocity": 0.025,
+      "pan": 0
+    },
+    {
+      "track": "tide",
+      "note": 52,
+      "t": 480,
+      "duration": 70,
+      "velocity": 0.025,
+      "pan": 0
+    },
+    {
+      "track": "glint",
+      "note": 74,
+      "t": 481,
+      "duration": 15,
+      "velocity": 0.012,
+      "pan": -0.45
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 482.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 485,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 487.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 490,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 492.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 495,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "glint",
+      "note": 81,
+      "t": 496.2,
+      "duration": 15,
+      "velocity": 0.012,
+      "pan": 0.45
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 497.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 500,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 502.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 505,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 507.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 510,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "glint",
+      "note": 74,
+      "t": 511.4,
+      "duration": 15,
+      "velocity": 0.012,
+      "pan": -0.45
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 512.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 520,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "tide",
+      "note": 38,
+      "t": 520,
+      "duration": 70,
+      "velocity": 0.025,
+      "pan": 0
+    },
+    {
+      "track": "tide",
+      "note": 45,
+      "t": 520,
+      "duration": 70,
+      "velocity": 0.025,
+      "pan": 0
+    },
+    {
+      "track": "tide",
+      "note": 52,
+      "t": 520,
+      "duration": 70,
+      "velocity": 0.025,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 522.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 525,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "glint",
+      "note": 81,
+      "t": 526.5999999999999,
+      "duration": 15,
+      "velocity": 0.012,
+      "pan": 0.45
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 527.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 530,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 532.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 535,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 537.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 540,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "glint",
+      "note": 74,
+      "t": 541.8,
+      "duration": 15,
+      "velocity": 0.012,
+      "pan": -0.45
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 542.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 545,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 547.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 550,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 552.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "glint",
+      "note": 81,
+      "t": 557,
+      "duration": 15,
+      "velocity": 0.012,
+      "pan": 0.45
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 560,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "tide",
+      "note": 38,
+      "t": 560,
+      "duration": 70,
+      "velocity": 0.025,
+      "pan": 0
+    },
+    {
+      "track": "tide",
+      "note": 45,
+      "t": 560,
+      "duration": 70,
+      "velocity": 0.025,
+      "pan": 0
+    },
+    {
+      "track": "tide",
+      "note": 52,
+      "t": 560,
+      "duration": 70,
+      "velocity": 0.025,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 562.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 565,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 567.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 570,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "glint",
+      "note": 74,
+      "t": 572.1999999999999,
+      "duration": 15,
+      "velocity": 0.012,
+      "pan": -0.45
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 572.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 575,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    },
+    {
+      "track": "pulse",
+      "note": 38,
+      "t": 577.5,
+      "duration": 1.3,
+      "velocity": 0.055,
+      "pan": 0
+    }
+  ]
+}

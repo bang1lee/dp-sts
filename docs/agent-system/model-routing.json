@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "scope": "ambient-lab",
+  "mode": "lead-dispatched-collaboration-tools",
+  "userDecision": "Use GPT-6.1 Terra at maximum reasoning for substantial complex coding; optimize repeated context, not artistic ambition.",
+  "roles": {
+    "lead": {
+      "model": "inherit-current-session",
+      "owns": ["creative direction", "integration", "user dialogue", "render scheduling"]
+    },
+    "implementation": {
+      "model": "gpt-6.1-terra",
+      "reasoning_effort": "ultra",
+      "fork_turns": "none",
+      "owns": ["complex generative algorithms", "shaders", "render tooling", "artifact packaging"]
+    },
+    "critic": {
+      "model": "inherit-current-session",
+      "owns": ["independent visual review", "evidence-bound acceptance", "concrete revision requests"]
+    },
+    "complexityDirector": {
+      "model": "gpt-6-astra",
+      "reasoning_effort": "high",
+      "fork_turns": "none",
+      "owns": ["complexity versus legibility", "artistic limits", "targeted feedback to Terra", "user-visible image review"]
+    }
+  },
+  "contextPolicy": {
+    "briefFields": ["user goal", "constraints", "owned files", "input paths", "interfaces", "acceptance evidence", "known defects"],
+    "fullHistoryByDefault": false,
+    "handoff": "Concise result plus changed files, validation evidence, remaining blockers; link artifacts instead of embedding logs.",
+    "reuseAgentForFollowups": true,
+    "avoidDuplicateExploration": true
+  },
+  "executionPolicy": {
+    "maxConcurrentHeavyRenders": 1,
+    "maxConcurrentTerraImplementers": 2,
+    "maxActiveAgentsIncludingLead": 4,
+    "nonOverlappingOwnershipRequired": true,
+    "preserveUserEditsAndPreviousArtifacts": true,
+    "retry": "Repeat only when there is new evidence and a specific change; escalate ambiguous artistic decisions to lead.",
+    "quality": "Reinvest reduced duplicated context into richer structure, layers and interactions; never simplify art to save tokens. Astra regulates perceptual and practical limits using actual artifacts.",
+    "visualReviewVisibility": "Show actual review images and before/after comparisons with observations, judgments and revision decisions to the user. Do not represent private review as user approval."
+  },
+  "limits": {
+    "automaticModelSwitching": false,
+    "globalSettingsChanged": false,
+    "tokenSavingsMeasured": false,
+    "costCeilingEnforced": false,
+    "note": "This is a project-local dispatch contract applied by the lead through collaboration tools, not an independent model-routing service."
+  }
+}

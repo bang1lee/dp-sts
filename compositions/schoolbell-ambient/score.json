@@ -1,0 +1,21 @@
+{
+  "title": "학교종 — 저녁 공기",
+  "version": "v01",
+  "status": "provisional synthesized arrangement; matching against 29.7-second reference preview only",
+  "bpm": 48,
+  "meter": "4/4",
+  "sampleRate": 48000,
+  "durationSeconds": 92,
+  "melodyStartSeconds": 3,
+  "passes": 2,
+  "melodyBars": [
+    "55 55 57 57", "55 55 52@2", "55 55 52 52", "50@4",
+    "55 55 57 57", "55 55 52@2", "55 52 50 52", "48@4"
+  ],
+  "harmonyBars": [
+    [36,43,47,52], [33,40,48,52], [36,43,48,52], [31,38,43,47],
+    [41,45,48,52], [33,40,48,52], [31,38,43,47], [36,43,48,52]
+  ],
+  "source": "School bell tune arranged in C; synthesized independently using Strudel/Superdough, no original recording used in rendering.",
+  "reference": "Rhubarb (#3) Spotify preview was available for spectral and spatial analysis; final sound is not an exact match."
+}

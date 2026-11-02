@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Ambient Lab — Sound into form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <a class="wordmark" href="/"
+          >AMBIENT LAB<span>01 / SOUND INTO FORM</span></a
+        >
+        <p class="badge">STRUDEL + JULIA</p>
+      </header>
+      <div class="heading">
+        <div>
+          <p class="eyebrow">A GENERATIVE STUDY</p>
+          <h1 id="composition-title">Quiet Orbit</h1>
+        </div>
+        <p class="intro">A slow-moving world,<br />shaped by what you hear.</p>
+      </div>
+      <section class="stage" aria-label="Audio-reactive fractal preview">
+        <canvas
+          id="fractal"
+          aria-label="Animated Julia fractal responding to the music"
+        ></canvas>
+        <div class="stage-caption">
+          <span>JULIA / COMPLEX PLANE</span
+          ><output id="clock" aria-label="Playback position">0.0s</output>
+        </div>
+      </section>
+      <section class="transport" aria-label="Audio playback and export">
+        <div class="actions">
+          <button id="prepare" type="button">Prepare composition</button
+          ><button id="play" type="button" disabled>Play</button
+          ><button id="stop" type="button" disabled>Stop</button
+          ><button id="download" type="button" disabled>Save WAV ↓</button>
+        </div>
+        <p id="format" class="metadata"></p>
+        <p id="status" role="status" aria-live="polite">
+          Prepare the composition, then press Play. Audio never starts
+          automatically.
+        </p>
+      </section>
+      <section class="workspace" aria-labelledby="score-title">
+        <div class="notes">
+          <p class="eyebrow">THE EXPERIMENT</p>
+          <h2 id="score-title">Change a note.<br />Shift the landscape.</h2>
+          <p>
+            Edit the score, seed, or visual response. Prepare again to hear the
+            result. Your WAV contains exactly the audio used in this preview.
+          </p>
+          <p>
+            For a synchronized film, save this score into your composition
+            folder and run:
+          </p>
+          <code
+            >pnpm nx run render:export<br />--composition=path/to/composition.json</code
+          >
+          <p class="fine">
+            Video exports use fixed frames. Live preview may skip frames when
+            the browser is busy.
+          </p>
+          <button id="save-score" type="button">Save score ↓</button>
+        </div>
+        <div class="editor">
+          <label for="score">COMPOSITION / JSON</label
+          ><textarea
+            id="score"
+            spellcheck="false"
+            aria-describedby="editor-help"
+          ></textarea>
+          <p id="editor-help">
+            Notes use Strudel mini-notation. Reactivity 0 disables the music’s
+            influence on the fractal.
+          </p>
+        </div>
+      </section>
+      <footer>
+        <span>DETERMINISTIC SCORE · RESPONSIVE FORM</span
+        ><span>Made to listen. Made to look.</span>
+      </footer>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

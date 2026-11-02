@@ -1,0 +1,34 @@
+{
+  "name": "@ambient-lab/audiovisual",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    "./offline": {
+      "types": "./src/audio/offline.ts",
+      "import": "./src/audio/offline.ts",
+      "default": "./src/audio/offline.ts"
+    },
+    "./visual": {
+      "types": "./src/visual/julia.ts",
+      "import": "./src/visual/julia.ts",
+      "default": "./src/visual/julia.ts"
+    },
+    "./audio": {
+      "types": "./src/audio/browser.ts",
+      "import": "./src/audio/browser.ts",
+      "default": "./src/audio/browser.ts"
+    },
+    ".": {
+      "types": "./src/index.ts",
+      "import": "./src/index.ts",
+      "default": "./src/index.ts"
+    },
+    "./package.json": "./package.json"
+  },
+  "dependencies": {
+    "@strudel/web": "1.3.0"
+  }
+}

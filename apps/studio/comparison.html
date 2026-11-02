@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Moonwater | 방향 비교</title>
+  <link rel="stylesheet" href="/src/comparison.css" />
+</head>
+<body>
+  <main>
+    <header class="masthead"><a href="/">Ambient Lab</a><span>Moonwater / 비교 실험</span></header>
+    <div class="heading"><div><p class="overline">한 곡, 두 개의 시선</p><h1>물 아래 달빛</h1></div><p class="intro">같은 30초 음원과 시간축 위에서 두 표현을 비교합니다. 재생하고 값을 움직이며 원하는 빛의 밀도와 흐름을 찾아보세요.</p></div>
+    <div class="notice"><strong>방향 미리보기</strong><span>두 화면은 브라우저에서 그린 표현 시안입니다. cables 또는 TouchDesigner에서 실행한 결과는 아닙니다.</span></div>
+    <section class="stages" aria-label="두 시각 방향 비교">
+      <article><div class="stage"><canvas id="crisp" width="960" height="600" aria-label="선명하고 성긴 공간의 물빛 미리보기"></canvas><div class="stage-index">A</div></div><div class="caption"><div><h2>선명한 입체감</h2><p>cables 방향 · 성긴 빛과 또렷한 물결</p></div><span>공간 / 반사</span></div></article>
+      <article><div class="stage"><canvas id="soft" width="960" height="600" aria-label="부드럽고 잔상이 있는 물빛 미리보기"></canvas><div class="stage-index">B</div></div><div class="caption"><div><h2>번지는 깊이</h2><p>TouchDesigner 방향 · 부드러운 빛과 잔상</p></div><span>안개 / 잔향</span></div></article>
+    </section>
+    <section class="transport" aria-label="공유 오디오 재생"><div class="play-row"><button id="play" class="primary" type="button">▶ <span>재생</span></button><div class="audio-title"><strong>Moonwater</strong><span>원곡 05:50–06:20 · 공유 오디오</span></div><output id="clock">00:00 / 00:30</output></div><label class="sr-only" for="seek">재생 위치</label><input id="seek" type="range" min="0" max="30" step="0.01" value="0" /><p id="audio-status" role="status">재생을 누르면 소리가 시작됩니다.</p></section>
+    <section class="controls" aria-labelledby="controls-title"><div class="controls-heading"><div><h2 id="controls-title">표현 조절</h2><p>두 화면에 같은 값을 적용합니다. 정렬을 높이면 빛의 점들이 공통 푸리에 곡선에 모입니다.</p></div><div class="actions"><button id="reset" type="button">초기화</button><button id="save" type="button">설정 저장</button></div></div><div class="sliders">
+      <label>빛의 밀도 <output id="density-value">55%</output><input id="density" type="range" min="10" max="100" value="55" /></label>
+      <label>반짝임 <output id="sparkle-value">60%</output><input id="sparkle" type="range" min="0" max="100" value="60" /></label>
+      <label>움직임 <output id="motion-value">45%</output><input id="motion" type="range" min="0" max="100" value="45" /></label>
+      <label>정렬 <output id="align-value">원본 곡선</output><input id="align" type="range" min="-1" max="100" value="-1" /><small>맨 왼쪽은 시간에 따른 원본 곡선</small></label>
+    </div></section>
+    <footer><span>공유 샘플 · 30초 / 48 kHz<br /><a id="native-guide" target="_blank" rel="noopener">네이티브 샘플 열기 안내</a></span><span>음량은 실제 WAV 분석값, 정렬과 호흡은 연출값입니다.</span></footer>
+  </main>
+  <script type="module" src="/src/comparison.ts"></script>
+</body>
+</html>

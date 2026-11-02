@@ -1,0 +1,15 @@
+{
+  "duration": 10,
+  "width": 1280,
+  "height": 720,
+  "fps": 30,
+  "seed": 4817,
+  "density": 0.48,
+  "glint_amount": 0.24,
+  "glint_rate": 0.22,
+  "flow_speed": 0.7,
+  "wave_period": 5.4,
+  "audio_latency": 0.3,
+  "audio_sync": 0.85,
+  "camera_travel": 2.4
+}

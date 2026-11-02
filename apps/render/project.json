@@ -1,0 +1,131 @@
+{
+  "name": "render",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/render/src",
+  "projectType": "application",
+  "tags": [],
+  "implicitDependencies": ["studio"],
+  "targets": {
+    "build": {
+      "executor": "@nx/esbuild:esbuild",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "platform": "node",
+        "outputPath": "apps/render/dist",
+        "format": ["cjs"],
+        "bundle": true,
+        "main": "apps/render/src/main.ts",
+        "tsConfig": "apps/render/tsconfig.app.json",
+        "assets": ["apps/render/src/assets"],
+        "esbuildOptions": {
+          "sourcemap": true,
+          "outExtension": {
+            ".js": ".js"
+          }
+        }
+      },
+      "configurations": {
+        "development": {},
+        "production": {
+          "esbuildOptions": {
+            "sourcemap": false,
+            "outExtension": {
+              ".js": ".js"
+            }
+          }
+        }
+      }
+    },
+    "inspect": {
+      "dependsOn": ["build"],
+      "cache": false,
+      "executor": "nx:run-commands",
+      "outputs": [],
+      "options": {
+        "command": "node apps/render/dist/main.js inspect"
+      }
+    },
+    "doctor": {
+      "dependsOn": [
+        "build",
+        {
+          "projects": ["media"],
+          "target": "doctor"
+        }
+      ],
+      "cache": false,
+      "executor": "nx:run-commands",
+      "outputs": [],
+      "options": {
+        "command": "node apps/render/dist/main.js doctor"
+      }
+    },
+    "smoke": {
+      "executor": "nx:run-commands",
+      "outputs": [],
+      "options": {
+        "command": "node apps/render/tools/browser-smoke.mjs"
+      }
+    },
+    "export": {
+      "executor": "nx:run-commands",
+      "outputs": [],
+      "cache": false,
+      "dependsOn": [
+        "build",
+        {
+          "projects": ["studio"],
+          "target": "build"
+        }
+      ],
+      "options": {
+        "command": "node apps/render/dist/main.js export"
+      }
+    },
+    "audio": {
+      "executor": "nx:run-commands",
+      "outputs": [],
+      "cache": false,
+      "dependsOn": [
+        "build",
+        {
+          "projects": ["studio"],
+          "target": "build"
+        }
+      ],
+      "options": {
+        "command": "node apps/render/dist/main.js audio"
+      }
+    },
+    "reproduce": {
+      "executor": "nx:run-commands",
+      "outputs": [],
+      "cache": false,
+      "dependsOn": [
+        "build",
+        {
+          "projects": ["studio"],
+          "target": "build"
+        }
+      ],
+      "options": {
+        "command": "node apps/render/dist/main.js reproduce"
+      }
+    },
+    "test": {
+      "executor": "nx:run-commands",
+      "outputs": [],
+      "options": {
+        "command": "tsx --test tools/pipeline.spec.ts"
+      },
+      "cache": true,
+      "inputs": [
+        "default",
+        "^default",
+        "{workspaceRoot}/tools/pipeline.spec.ts",
+        "{workspaceRoot}/compositions/**/*.json"
+      ]
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "@org/studio",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "@ambient-lab/audiovisual": "workspace:*",
+    "three": "^0.187.0"
+  },
+  "devDependencies": {
+    "@types/three": "^0.187.0"
+  }
+}

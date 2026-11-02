@@ -1,0 +1,52 @@
+{
+  "work": "Johann Sebastian Bach, The Well-Tempered Clavier Book I, Prelude in C major BWV 846, opening four bars",
+  "source": "https://www.mutopiaproject.org/ftp/BachJS/BWV846/wtk1-prelude1/wtk1-prelude1.ly",
+  "edition": "Mutopia 2011/09/12-5, Tobias Erbsland",
+  "license": "Public Domain (Mutopia edition)",
+  "sourceFile": "compositions/gujora-ambient/bwv846-source.ly",
+  "sourceSha256": "afa237b10637ca7839b4c9e98b64ba89c781e2cfc1b980679b2632a31951aacd",
+  "verified": true,
+  "verification": "Opening notes checked against both hands of the source LilyPond score; the original sustained lower notes are rearticulated as an ambient arpeggio.",
+  "bars": [
+    [
+      60,
+      64,
+      67,
+      72,
+      76,
+      67,
+      72,
+      76
+    ],
+    [
+      60,
+      62,
+      69,
+      74,
+      77,
+      69,
+      74,
+      77
+    ],
+    [
+      59,
+      62,
+      67,
+      74,
+      77,
+      67,
+      74,
+      77
+    ],
+    [
+      60,
+      64,
+      67,
+      72,
+      76,
+      67,
+      72,
+      76
+    ]
+  ]
+}

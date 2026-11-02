@@ -1,0 +1,11 @@
+{
+  "formula": "z_0=c; z_(n+1)=z_n^8+c using spherical power (r^8, 8\u03b8, 8\u03c6); 12 iterations, escape radius 4",
+  "surface": "distance estimator 0.5 log(r) r / derivative; isovalue 0.006; marching cubes",
+  "grid": 100,
+  "extent": 1.45,
+  "sectionPlanes": 19,
+  "surfaceTriangles": 72692,
+  "surfaceVertices": 218076,
+  "lineSegments": 12664,
+  "lineVertices": 25328
+}

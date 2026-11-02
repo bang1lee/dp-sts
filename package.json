@@ -1,0 +1,40 @@
+{
+  "name": "@org/source",
+  "version": "0.1.0",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nx dev studio",
+    "check": "nx run-many -t build,typecheck,lint,test",
+    "doctor": "nx run render:doctor",
+    "inspect": "nx run render:inspect"
+  },
+  "private": true,
+  "devDependencies": {
+    "@nx/esbuild": "24.0.3",
+    "@nx/js": "24.0.3",
+    "@nx/node": "24.0.3",
+    "@nx/vite": "24.0.3",
+    "@nx/web": "24.0.3",
+    "@swc-node/register": "1.11.1",
+    "@swc/core": "1.15.8",
+    "@swc/helpers": "0.5.18",
+    "@types/node": "^22.20.5",
+    "esbuild": "^0.27.0",
+    "jiti": "2.4.2",
+    "nx": "24.0.3",
+    "prettier": "^3.8.1",
+    "swc-loader": "0.1.15",
+    "tslib": "^2.3.0",
+    "tsx": "^4.20.5",
+    "typescript": "~6.0.3",
+    "vite": "^8.0.0"
+  },
+  "packageManager": "pnpm@11.25.0",
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": "22.22.2",
+      "onFail": "download"
+    }
+  }
+}

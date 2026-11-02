@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "quiet-orbit",
+  "title": "Quiet Orbit",
+  "durationSeconds": 30,
+  "seed": 42,
+  "audio": {
+    "notes": "[c3,e3,g3,b3] [a2,c3,e3,g3] [f2,a2,c3,e3] [g2,b2,d3,a3]",
+    "gain": 0.18,
+    "cps": 0.25,
+    "slow": 4,
+    "attack": 1.8,
+    "release": 3.4,
+    "cutoff": 1800,
+    "sampleRate": 48000,
+    "fadeSeconds": 1
+  },
+  "visual": {
+    "kind": "julia",
+    "iterations": 96,
+    "zoom": 1.1,
+    "speed": 0.12,
+    "reactivity": 0.8,
+    "hue": 0.55
+  },
+  "render": {
+    "width": 960,
+    "height": 540,
+    "fps": 24
+  }
+}
