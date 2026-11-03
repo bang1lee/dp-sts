@@ -7,6 +7,11 @@
     "language:python"
   ],
   "targets": {
+    "gujora-climax-v02-audio": {
+      "cache": false,
+      "executor": "nx:run-commands",
+      "options": { "command": "uv run --locked --package ambient-media python -m ambient_media.gujora_climax_v02_audio" }
+    },
     "gujora-climax-audio": {
       "cache": false,
       "executor": "nx:run-commands",

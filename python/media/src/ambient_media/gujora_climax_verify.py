@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 import os
 import sys
 import tempfile
@@ -11,17 +12,17 @@ from pathlib import Path
 import cv2
 import numpy as np
 
-from ambient_media.gujora_verify import decode, frame_at, inspect
-from ambient_media.storm_delivery import sha256
+from ambient_media.gujora_verify import decode
+from ambient_media.storm_delivery import probe, run, sha256
 
 TIMES = (3, 9, 15, 21, 27)
 OUTPUTS = ('contact-sheet.jpg', 'poster.jpg', 'delivery.json')
 
 
-def validate_metadata(root: Path) -> dict:
+def validate_metadata(root: Path, size: int = 1080) -> dict:
     render = json.loads((root/'render.json').read_text())
     expected = {'start':0, 'duration':30, 'fps':24, 'frames':720,
-                'width':1080, 'height':1080, 'errors':[]}
+                'width':size, 'height':size, 'errors':[]}
     if any(render.get(k) != v for k,v in expected.items()):
         raise ValueError('metadata does not describe an error-free 30-second final render')
     source = render.get('source')
@@ -70,17 +71,50 @@ def validate_metadata(root: Path) -> dict:
             'renderer_geometry_metadata':geometry, 'renderer_camera_metadata':render.get('camera')}
 
 
-def make_sheet(video: Path, directory: Path) -> list[int]:
-    size,gap,caption=340,10,32
-    sheet=np.full((2*(size+caption)+3*gap,3*size+4*gap,3),18,np.uint8)
+def inspect_video(path: Path, size: int) -> dict:
+    data = probe(path, count_frames=True)
+    videos = [stream for stream in data['streams'] if stream['codec_type'] == 'video']
+    audios = [stream for stream in data['streams'] if stream['codec_type'] == 'audio']
+    if len(videos) != 1 or len(audios) != 1:
+        raise ValueError(f'{path}: expected one video and one audio stream')
+    video, audio = videos[0], audios[0]
+    actual = (video.get('width'), video.get('height'), video.get('avg_frame_rate'),
+              int(video.get('nb_read_frames', -1)))
+    if actual != (size, size, '24/1', 720):
+        raise ValueError(f'{path}: unexpected video dimensions, frame rate or decoded frame count: {actual}')
+    if audio.get('sample_rate') != '48000' or audio.get('channels') != 2:
+        raise ValueError(f'{path}: expected 48 kHz stereo audio')
+    durations = {'container': data['format'].get('duration'), 'video': video.get('duration'),
+                 'audio': audio.get('duration')}
+    for label, value in durations.items():
+        if value is None or not math.isclose(float(value), 30, abs_tol=.001):
+            raise ValueError(f'{path}: unexpected {label} duration {value}')
+    return {'width':size, 'height':size, 'fps':24, 'decoded_video_frames':720,
+            'durations_seconds':{label:float(value) for label,value in durations.items()},
+            'sample_rate_hz':48000, 'channels':2, 'video_codec':video.get('codec_name'),
+            'audio_codec':audio.get('codec_name')}
+
+
+def frame_at_size(video: Path, second: int, size: int) -> np.ndarray:
+    result = run(['ffmpeg','-v','error','-ss',str(second),'-i',str(video),
+                  '-frames:v','1','-f','image2pipe','-vcodec','png','pipe:1'])
+    frame = cv2.imdecode(np.frombuffer(result.stdout,dtype=np.uint8),cv2.IMREAD_COLOR)
+    if frame is None or frame.shape != (size,size,3):
+        raise ValueError(f'{video}: could not decode {size}-square frame at {second} seconds')
+    return frame
+
+
+def make_sheet(video: Path, directory: Path, size: int = 1080) -> list[int]:
+    tile,gap,caption=340,10,32
+    sheet=np.full((2*(tile+caption)+3*gap,3*tile+4*gap,3),18,np.uint8)
     for index,second in enumerate(TIMES):
-        picture=cv2.resize(frame_at(video,second),(size,size),interpolation=cv2.INTER_AREA)
-        x=gap+(index%3)*(size+gap); y=gap+(index//3)*(size+caption+gap)
-        sheet[y:y+size,x:x+size]=picture
-        cv2.putText(sheet,f'{second:02d}s',(x+5,y+size+23),cv2.FONT_HERSHEY_SIMPLEX,.6,(240,240,240),1,cv2.LINE_AA)
+        picture=cv2.resize(frame_at_size(video,second,size),(tile,tile),interpolation=cv2.INTER_AREA)
+        x=gap+(index%3)*(tile+gap); y=gap+(index//3)*(tile+caption+gap)
+        sheet[y:y+tile,x:x+tile]=picture
+        cv2.putText(sheet,f'{second:02d}s',(x+5,y+tile+23),cv2.FONT_HERSHEY_SIMPLEX,.6,(240,240,240),1,cv2.LINE_AA)
     if not cv2.imwrite(str(directory/'contact-sheet.jpg'),sheet,[cv2.IMWRITE_JPEG_QUALITY,94]):
         raise RuntimeError('could not write contact sheet')
-    if not cv2.imwrite(str(directory/'poster.jpg'),frame_at(video,15),[cv2.IMWRITE_JPEG_QUALITY,94]):
+    if not cv2.imwrite(str(directory/'poster.jpg'),frame_at_size(video,15,size),[cv2.IMWRITE_JPEG_QUALITY,94]):
         raise RuntimeError('could not write poster')
     return list(TIMES)
 
@@ -89,6 +123,7 @@ def main() -> int:
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--root',type=Path,default=Path('runs/dp-sts-gujora-climax-v01'))
     parser.add_argument('--out',type=Path,help='output folder; default ROOT/delivery')
+    parser.add_argument('--size',type=int,choices=(720,1080),default=1080,help='square output size; default 1080')
     parser.add_argument('--overwrite',action='store_true',help='replace existing delivery files')
     args=parser.parse_args()
     root=args.root.resolve(); out=(args.out or root/'delivery').resolve()
@@ -101,15 +136,15 @@ def main() -> int:
         existing=[str(out/name) for name in OUTPUTS if (out/name).exists()]
         if existing and not args.overwrite:
             raise ValueError('delivery already exists; choose --out or use --overwrite:\n'+'\n'.join(existing))
-        provenance=validate_metadata(root)
+        provenance=validate_metadata(root,args.size)
         video=root/'artwork.mp4'
-        info=inspect(video,30)
+        info=inspect_video(video,args.size)
         info['audio']=decode(video,30)
         info['sha256']=sha256(video)
         out.mkdir(parents=True,exist_ok=True)
         with tempfile.TemporaryDirectory(prefix='.climax-delivery-',dir=out) as tmp:
             temp=Path(tmp)
-            sampled=make_sheet(video,temp)
+            sampled=make_sheet(video,temp,args.size)
             report={'status':'technical_checks_passed', 'artwork':{'file':os.path.relpath(video,out),**info},
                     'provenance':provenance, 'contact_sheet':{'file':'contact-sheet.jpg','sample_seconds':sampled},
                     'poster':{'file':'poster.jpg','sample_second':15},

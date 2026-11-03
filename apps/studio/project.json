@@ -11,7 +11,23 @@
         "production",
         "^production",
         "{workspaceRoot}/compositions/**/*.json",
-        { "externalDependencies": ["vite"] }
+        {
+          "externalDependencies": [
+            "vite"
+          ]
+        }
+      ]
+    },
+    "direction-test": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "tsx --test tools/recipe-film-direction.spec.ts"
+      },
+      "cache": true,
+      "inputs": [
+        "default",
+        "{workspaceRoot}/tools/recipe-film-direction.spec.ts",
+        "{workspaceRoot}/assets/original-kit/manifest.json"
       ]
     }
   }

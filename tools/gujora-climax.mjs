@@ -16,7 +16,7 @@ attribute vec3 aPosition;
 attribute vec3 aDrift;
 attribute vec4 aData;
 uniform mat4 uView,uProjection;
-uniform float uLow,uMid,uHigh,uAttack,uLine;
+uniform float uLow,uMid,uHigh,uAttack,uLine,uResolutionScale;
 varying vec4 vColor;
 varying vec2 vStretch;
 void main(){
@@ -26,7 +26,7 @@ void main(){
  float depth=max(.08,-eye.z);
  gl_Position=uProjection*eye;
  float pointScale=type>9.5?40.:(type<.5||type>7.5?40.:54.);
- gl_PointSize=clamp(sz*pointScale/depth*(type>9.5?1.+.25*uAttack:1.),2.5,48.);
+ gl_PointSize=clamp(sz*pointScale/depth*(type>9.5?1.+.25*uAttack:1.),2.5,48.)*uResolutionScale;
  float fog=mix(1.,.65,smoothstep(10.,40.,depth))*smoothstep(.20,1.3,depth);
  vec3 ink=vec3(.78,.85,.91);
  float alpha=.43;
@@ -40,10 +40,10 @@ void main(){
  else if(type<7.5){ink=vec3(.66,.62,.57);alpha=.38;}
  else if(type<8.5){ink=vec3(.76,.84,.90);alpha=.82;}
  else if(type<9.5){ink=vec3(.70,.78,.83);alpha=.50*smoothstep(.05,.38,abs(uView[0][2]));}
- else {ink=vec3(.58,.71,.84);alpha=.028*(1.+1.5*uAttack);}
+ else {ink=vec3(.58,.71,.84);alpha=.10*(1.+1.6*uAttack);}
  // Band envelopes influence light only, never geometry.
  float light=1.+.12*uLow+.05*uMid+.03*uHigh + uAttack*(type>9.5?.75:(type>3.5&&type<4.5?1.2:.12));
- vColor=vec4(ink*lum*light*1.65,clamp(alpha*fog,0.,1.));
+ vColor=vec4(ink*lum*light*1.95,clamp(alpha*fog,0.,1.));
  vStretch=vec2(1.+.22*abs(aDrift.x),1.+.42*abs(aDrift.y));
 }`;
 const fragment=`
@@ -62,7 +62,9 @@ void main(){
  if(vColor.a*shape<.001)discard;
  gl_FragColor=vec4(vColor.rgb,vColor.a*shape);
 }`;
-const fps=24,size=2160,outputSize=1080;
+const fps=24,outputSize=Number(process.argv.find(v=>v.startsWith('--size='))?.slice(7)??'1080');
+if(![720,1080].includes(outputSize))throw Error('Output size must be 720 or 1080.');
+const size=outputSize*2;
 // One authoritative route is passed to the renderer and written to metadata.
 const CAMERA_KEYFRAMES=Object.freeze([
   {phase:0,eye:[0,5.2,12.8],target:[0,.1,0]},
@@ -70,8 +72,8 @@ const CAMERA_KEYFRAMES=Object.freeze([
   {phase:.20,eye:[-2.5,3.6,10.5],target:[-.2,1.0,1]},
   {phase:.30,eye:[-1.0,1.6,5.0],target:[-.3,.2,1.3]},
   {phase:.43,eye:[6.7,4.3,10.2],target:[-.2,1.1,.4]},
-  {phase:.55,eye:[1.0,2.5,4.2],target:[.2,3.2,1.4]},
-  {phase:.66,eye:[-.3,2.1,1.8],target:[.3,3.3,-.1]},
+  {phase:.55,eye:[1.0,2.5,4.2],target:[.2,1.5,.2]},
+  {phase:.66,eye:[-.3,2.1,2.9],target:[.2,1.2,-.5]},
   {phase:.76,eye:[3.7,7.3,10.7],target:[.2,1.8,1]},
   {phase:.91,eye:[.6,5.8,14.5],target:[0,.25,0]},
   {phase:1,eye:[0,5.2,12.8],target:[0,.1,0]}
@@ -79,7 +81,7 @@ const CAMERA_KEYFRAMES=Object.freeze([
 
 const get=(name,defaultValue)=>process.argv.find(v=>v.startsWith(`--${name}=`))?.slice(name.length+3)??defaultValue;
 const flag=name=>process.argv.includes(`--${name}`);
-const preview=flag('preview'),stillsOnly=flag('stills-only');
+const preview=flag('preview'),stillsOnly=flag('stills-only'),bassComparison=flag('bass-comparison');
 const total=Number(get('duration-total','30'));
 if(!Number.isFinite(total)||total<=0||Math.abs(total*fps-Math.round(total*fps))>1e-7)throw Error('Total duration must be positive and frame-aligned.');
 const start=Number(get('start',preview?String(Math.round(total*.4*fps)/fps):'0'));
@@ -124,6 +126,7 @@ const targets=[...stills.map(t=>path.join(out,nameAt(t))),path.join(out,stillsOn
   path.join(out,preview?'preview-renderer.mjs':'renderer.mjs'),path.join(out,preview?'preview-scene.mjs':'scene.mjs'),path.join(out,stillsOnly?'stills-base-scene.mjs':preview?'preview-base-scene.mjs':'base-scene.mjs'),
   path.join(out,stillsOnly?'stills-reference.png':preview?'preview-reference.png':'reference.png')];
 if(!stillsOnly)targets.push(video);
+if(bassComparison)targets.push(path.join(out,'diagnostic-bass-off.png'),path.join(out,'diagnostic-bass-actual.png'));
 for(const target of targets){try{await access(target);throw Error(`Refusing to overwrite ${target}`);}catch(e){if(e.code!=='ENOENT')throw e;}}
 const b64=array=>Buffer.from(array.buffer,array.byteOffset,array.byteLength).toString('base64');
 const rr=createRequire(path.resolve('apps/render/package.json')),{chromium}=rr('playwright');
@@ -161,10 +164,11 @@ try{
    const make=parts=>parts.map(part=>{const b=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,b);gl.bufferData(gl.ARRAY_BUFFER,decode(part),gl.STATIC_DRAW);return b;});
    const pointBuffers=make(data.points),lineBuffers=make(data.lines);
    const locations=['aPosition','aDrift','aData'].map(k=>gl.getAttribLocation(program,k));
-   const uniforms=Object.fromEntries(['uView','uProjection','uLow','uMid','uHigh','uAttack','uLine'].map(k=>[k,gl.getUniformLocation(program,k)]));
+   const uniforms=Object.fromEntries(['uView','uProjection','uLow','uMid','uHigh','uAttack','uLine','uResolutionScale'].map(k=>[k,gl.getUniformLocation(program,k)]));
    const near=.08,far=150,focal=2.747477;
    const projection=new Float32Array([focal,0,0,0,0,focal,0,0,0,0,(far+near)/(near-far),-1,0,0,2*far*near/(near-far),0]);
    gl.uniformMatrix4fv(uniforms.uProjection,false,projection);
+   gl.uniform1f(uniforms.uResolutionScale,data.size/2160);
    const bind=buffers=>{for(let i=0;i<3;i++){gl.bindBuffer(gl.ARRAY_BUFFER,buffers[i]);gl.enableVertexAttribArray(locations[i]);gl.vertexAttribPointer(locations[i],i===2?4:3,gl.FLOAT,false,0,0);}};
    gl.viewport(0,0,data.size,data.size);gl.enable(gl.DEPTH_TEST);gl.depthFunc(gl.LEQUAL);gl.depthMask(true);
    gl.enable(gl.BLEND);gl.blendFunc(gl.SRC_ALPHA,gl.ONE_MINUS_SRC_ALPHA);
@@ -172,7 +176,7 @@ try{
      gl.clearColor(0,0,0,1);gl.clearDepth(1);gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);
      gl.uniformMatrix4fv(uniforms.uView,false,new Float32Array(window.cameraAt({phase}).view));
      gl.uniform1f(uniforms.uLow,values[0]);gl.uniform1f(uniforms.uMid,values[1]);gl.uniform1f(uniforms.uHigh,values[2]);gl.uniform1f(uniforms.uAttack,values[3]);
-     gl.uniform1f(uniforms.uLine,0);bind(pointBuffers);gl.drawArrays(gl.POINTS,0,data.basePointCount);gl.depthMask(false);gl.drawArrays(gl.POINTS,data.basePointCount,data.pointCount-data.basePointCount);gl.depthMask(true);
+     gl.uniform1f(uniforms.uLine,0);bind(pointBuffers);gl.depthMask(false);gl.drawArrays(gl.POINTS,0,data.basePointCount);gl.drawArrays(gl.POINTS,data.basePointCount,data.pointCount-data.basePointCount);gl.depthMask(true);
      gl.uniform1f(uniforms.uLine,1);bind(lineBuffers);gl.drawArrays(gl.LINES,0,data.lineCount);
      const err=gl.getError();if(err!==gl.NO_ERROR)throw Error(`WebGL error ${err}`);
      return canvas.toDataURL('image/png').split(',')[1];
@@ -217,10 +221,21 @@ try{
    count++;
    if(count%360===0||count===1||count===indexes.length)console.log(`${tag} ${count}/${indexes.length} ${((Date.now()-began)/1000).toFixed(1)}s`);
  }
+ let bassDiagnostic=null;
+ if(bassComparison){
+   const first=Math.round(18*fps),last=Math.min(Math.round(21*fps),controls.length);
+   let peak=first<last?first:0;for(let i=peak+1;i<(first<last?last:controls.length);i++)if(controls[i][3]>controls[peak][3])peak=i;
+   const t=peak/fps,actual=controls[peak],zero=[...actual];zero[3]=0;
+   for(const [name,values] of [['diagnostic-bass-off.png',zero],['diagnostic-bass-actual.png',actual]]){
+     const image=Buffer.from(await page.evaluate(payload=>window.drawFrame(payload),{t,phase:t/total,values}),'base64');
+     await writeFile(path.join(out,name),image,{flag:'wx'});
+   }
+   bassDiagnostic={frame:peak,time:t,actualAttack:actual[3],offAttack:0,otherBands:actual.slice(0,3),cameraPhase:t/total,files:['diagnostic-bass-off.png','diagnostic-bass-actual.png']};
+ }
  if(encoder){encoder.stdin.end();const [status]=await done;if(status!==0)throw Error(`Encoder exited ${status}`);}
  if(count!==indexes.length)throw Error('Incomplete frame sequence.');
  const meta={title:'Gujora / Yundol — climax',method:'Static 3D particles with independently sampled Gaussian atmospheric splats, 2x spatial supersampling and perspective travel; audio modulates fog and light, not positions; no trained Gaussian reconstruction',
-   start,duration:stillsOnly?null:duration,fps,frames:count,width:outputSize,height:outputSize,renderWidth:size,renderHeight:size,supersampling:{factor:2,downsample:'ffmpeg lanczos',stillWidth:size,stillHeight:size},stillTimes:stills,stillsOnly,
+   start,duration:stillsOnly?null:duration,fps,frames:count,width:outputSize,height:outputSize,renderWidth:size,renderHeight:size,supersampling:{factor:2,downsample:'ffmpeg lanczos',stillWidth:size,stillHeight:size},stillTimes:stills,stillsOnly,bassDiagnostic,
    source:{cover:coverPath,coverSha256:hash(coverBytes),audio:audioPath,audioSha256:audioHash,features:featurePath,featuresSha256:hash(featureBytes),attacks:attackPath,attacksSha256:hash(attackBytes),baseSceneSha256:hash(baseSceneBytes),implementationSha256:hash(rendererBytes),sceneSha256:hash(sceneBytes),
      vertexSha256:hash(vertex),fragmentSha256:hash(fragment)},
    geometry:{seed:scene.seed,pointCount:scene.count,basePointCount:scene.basePointCount,addedFogPointCount:scene.addedFogPointCount,worldBounds:scene.bounds,lineVertexCount:scene.lineCount,groups:scene.groups,people:scene.people,design:scene.design,staticParticlePositions:true,waterPlaneY:scene.waterPlaneY},

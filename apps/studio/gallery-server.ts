@@ -84,7 +84,7 @@ function metadata(path: string): Record<string, unknown> | null {
 }
 
 const titles: Record<string, string> = {
-  'dp-sts-gujora-spatial-v01': '구조라 공간 입자', 'dp-sts-gujora-climax-v01': '구조라 · 30초 하이라이트', 'dp-sts-gujora-particles-v01': '구조라 입자 영상',
+  'dp-sts-gujora-spatial-v01': '구조라 공간 입자', 'dp-sts-gujora-climax-v01': '구조라 · 30초 시안 v01', 'dp-sts-gujora-climax-v02': '구조라 · 30초 시안 v02', 'dp-sts-gujora-particles-v01': '구조라 입자 영상',
   'dp-sts-gujora-cover-v01': '구조라 커버', 'dp-sts-gujora-film-v01': '구조라 영상',
   'dp-sts-moonwater-v02': '문워터', 'dp-sts-moonwater-ave-v01': '문워터 · 아베 마리아',
   'dp-sts-bloom-hydra-v01': '블룸 · 하이드라', 'dp-sts-bloom-base-v01': '블룸 · 기본', 'dp-sts-bloom-audio-v01': '블룸 · 오디오',
@@ -108,8 +108,8 @@ function reviewsFor(run: string, docs: GalleryFile[]): GalleryFile[] {
 }
 export function hasCompletedRender(name: string, render: Record<string, unknown> | null, hasArtwork: boolean): boolean {
   if (!render || !hasArtwork) return false;
-  if (name === 'dp-sts-gujora-spatial-v01' || name === 'dp-sts-gujora-climax-v01') {
-    const seconds = name === 'dp-sts-gujora-climax-v01' ? 30 : 464;
+  if (name === 'dp-sts-gujora-spatial-v01' || /^dp-sts-gujora-climax-v0[12]$/.test(name)) {
+    const seconds = name === 'dp-sts-gujora-spatial-v01' ? 464 : 30;
     return render.duration === seconds && render.fps === 24 && render.frames === seconds * 24 &&
       Array.isArray(render.errors) && render.errors.length === 0;
   }
@@ -126,9 +126,9 @@ function makeGroup(id: string, paths: string[], docs: GalleryFile[]): GalleryGro
   // An active MP4 may exist before its index is finalized. The spatial film has
   // an explicit completion record; for other works suppress recently growing
   // artwork files until they have settled or a render record is available.
+  const guarded = name === 'dp-sts-gujora-spatial-v01' || /^dp-sts-gujora-climax-v0[12]$/.test(name);
   const files = found.filter((f) => !(f.type === 'video' && /^artwork\./i.test(f.name) &&
-    ((['dp-sts-gujora-spatial-v01', 'dp-sts-gujora-climax-v01'].includes(name) && !completeRender) ||
-     (!['dp-sts-gujora-spatial-v01', 'dp-sts-gujora-climax-v01'].includes(name) && !completeRender && Date.now()-f.mtime < 30000))));
+    ((guarded && !completeRender) || (!guarded && !completeRender && Date.now()-f.mtime < 30000))));
   // Artwork and preview files precede frame sequences in the interface.
   files.sort((a, b) => {
     const score = (f: GalleryFile) => /(?:^|\/)artwork\./i.test(f.path) ? 0 : /(?:^|\/)delivery\/poster\./i.test(f.path) ? 1 : /preview/i.test(f.name) ? 2 : /frame[-_]?\d/i.test(f.name) ? 4 : 3;
@@ -136,16 +136,16 @@ function makeGroup(id: string, paths: string[], docs: GalleryFile[]): GalleryGro
   });
   const images = files.filter((f) => f.type === 'image');
   const poster = images.find((f) => /(?:^|\/)delivery\/poster\./i.test(f.path)) || images.find((f) => /poster/i.test(f.name)) || images.find((f) => /preview/i.test(f.name)) || images.find((f) => /artwork|cover/i.test(f.name)) || images.find((f) => /frame/i.test(f.name)) || images[0];
-  const rejected = /^(dp-sts-gujora-particles-v01|dp-sts-gujora-campfire-v01|dp-sts-gujora-particles-look-v0[12]|dp-sts-gujora-spatial-look-v01)$/.test(name);
+  const rejected = /^(dp-sts-gujora-climax-v01|dp-sts-gujora-particles-v01|dp-sts-gujora-campfire-v01|dp-sts-gujora-particles-look-v0[12]|dp-sts-gujora-spatial-look-v01)$/.test(name);
   const delivery = metadata(`runs/${id}/delivery/delivery.json`) || metadata(`runs/${id}/delivery.json`);
   const artwork = files.some((f) => f.type === 'video' && /^artwork\./i.test(f.name));
   const verifiedRecord = Boolean(artwork && delivery?.artwork && ['technical_checks_passed', 'passed'].includes(String(delivery?.status)));
-  const status: GalleryGroup['status'] = rejected ? 'rejected' : name === 'dp-sts-gujora-climax-v01' && !completeRender ? 'in-progress' : name === 'dp-sts-gujora-spatial-v01' && completeRender ? 'previous' : name === 'dp-sts-gujora-spatial-v01' && !completeRender ? 'in-progress' : verifiedRecord ? 'technical-pass' : 'unreviewed';
+  const status: GalleryGroup['status'] = rejected ? 'rejected' : name === 'dp-sts-gujora-climax-v02' && !completeRender ? 'in-progress' : name === 'dp-sts-gujora-spatial-v01' && completeRender ? 'previous' : name === 'dp-sts-gujora-spatial-v01' && !completeRender ? 'in-progress' : verifiedRecord ? 'technical-pass' : 'unreviewed';
   const labels = { rejected: '이전 시안 · 재작업 필요', 'in-progress': '제작 진행 중', previous: '이전 버전 · 무아레 개선 요청', 'technical-pass': '기술 점검 기록 있음', unreviewed: '감상 확인 전' };
   const reviews = reviewsFor(id, docs);
   let directoryMtime = 0;
   try { directoryMtime = lstatSync(join(project, 'runs', id)).mtimeMs; } catch { /* removed */ }
-  const statusLabel = name === 'dp-sts-gujora-campfire-v01' ? '이전 시안 · 인물 3명 해석 오류' : name === 'dp-sts-gujora-climax-v01' && completeRender && !verifiedRecord ? '최종 검증 대기' : labels[status];
+  const statusLabel = name === 'dp-sts-gujora-campfire-v01' ? '이전 시안 · 인물 3명 해석 오류' : name === 'dp-sts-gujora-climax-v01' ? '이전 시안 · 음원 불수용' : name === 'dp-sts-gujora-climax-v02' && completeRender && !verifiedRecord ? '최종 검증 대기' : labels[status];
   return { id, title: titleFor(name), subtitle: id.includes('/') ? titleFor(id.split('/')[0]) : id, status, statusLabel, mtime: Math.max(directoryMtime, ...files.map((f) => f.mtime)), poster: poster?.url || null, files, reviews };
 }
 
