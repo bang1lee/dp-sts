@@ -1,10 +1,20 @@
-# Ambient Lab
+# dp-sts
+
+![dp-sts — two forearms touching, skin texture and goosebumps in extreme close-up](assets/brand/dp-sts-cover-v01.png)
+
+An evolving audiovisual art project exploring light, touch, particles and the relationships between sound and space. Each concept can define its own production process.
+
+Latest study: [Gujora — a continuous world](docs/experiments/gujora-cover/continuum-film.md), a 30-second, 720×720 particle film. Music direction: use Aphex Twin’s **#3** as a reference for pace, register and instrument texture while composing original music; do not insert its recording. [Visual review and evidence](docs/experiments/gujora-cover/continuum-review.md).
+
+This repository is private. Invited collaborators can browse the code and documentation; rendered films and audio under `runs/` remain local and are not included in the repository. Run the studio locally to browse its [artifact gallery](http://localhost:4200/gallery.html).
+
+## Studio workspace
 
 A working local studio and export pipeline for ambient music and audio-reactive fractal films. Nx orchestrates the workspace; pnpm owns JavaScript/TypeScript dependencies and uv owns Python dependencies.
 
 Optional engine extension: [TouchDesigner / cables integration status](docs/engine-extension.md) and [shared audio/timeline/Fourier bundle instructions](packages/engine-bridge/README.md). Native scene rendering remains a separate validation step.
 
-## Current artwork: dp-sts
+## Earlier experiment: dp-sts psytrance
 
 [dp-sts](docs/experiments/psytrance/README.md) is a composition-specific ten-minute psytrance experiment with black-and-white dotted fractals. Its full MP4 and stereo WAV are in `runs/dp-sts-v01/`. Full-file technical verification and the independent visual review passed; auditory artistic acceptance remains pending because the tested listening tools failed their controls. See the [bound review](docs/experiments/psytrance/critique-dp-sts-final.md).
 
