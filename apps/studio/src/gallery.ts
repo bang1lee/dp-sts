@@ -144,7 +144,7 @@ gallery.addEventListener('click', (event) => {
   if (group) openGroup(group);
 });
 $('#feature').addEventListener('click', () => {
-  const group = groups.find((item) => item.id === 'dp-sts-gujora-climax-v02') || groups.find((item) => item.id === 'dp-sts-gujora-climax-v01') || groups.find((item) => item.id === 'dp-sts-gujora-spatial-v01') || groups.find((item) => item.id === 'dp-sts-gujora-film-v01');
+  const group = groups.find((item) => item.id === 'dp-sts-gujora-continuum-v01') || groups.find((item) => item.id === 'dp-sts-gujora-climax-v02') || groups.find((item) => item.id === 'dp-sts-gujora-climax-v01') || groups.find((item) => item.id === 'dp-sts-gujora-spatial-v01') || groups.find((item) => item.id === 'dp-sts-gujora-film-v01');
   if (group) openGroup(group);
 });
 $('.filters').addEventListener('click', (event) => {

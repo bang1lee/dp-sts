@@ -7,6 +7,36 @@
     "language:python"
   ],
   "targets": {
+    "gujora-continuum-audio": {
+      "cache": false,
+      "executor": "nx:run-commands",
+      "options": { "command": "uv run --locked --package ambient-media python -m ambient_media.gujora_continuum_audio" }
+    },
+    "gujora-continuum-render": {
+      "cache": false,
+      "executor": "nx:run-commands",
+      "options": { "command": "pnpm exec node tools/gujora-continuum.mjs --size=720" }
+    },
+    "gujora-continuum-stills": {
+      "cache": false,
+      "executor": "nx:run-commands",
+      "options": { "command": "pnpm exec node tools/gujora-continuum.mjs --size=720 --stills-only --out=runs/dp-sts-gujora-continuum-stills-v01" }
+    },
+    "gujora-continuum-verify": {
+      "cache": false,
+      "executor": "nx:run-commands",
+      "options": { "command": "uv run --locked --package ambient-media python -m ambient_media.gujora_continuum_verify" }
+    },
+    "gujora-hihat-score": {
+      "cache": false,
+      "executor": "nx:run-commands",
+      "options": { "command": "pnpm exec node tools/gujora-hihat-score.mjs" }
+    },
+    "gujora-hihat-audio": {
+      "cache": false,
+      "executor": "nx:run-commands",
+      "options": { "command": "uv run --locked --package ambient-media python -m ambient_media.gujora_hihat_audio" }
+    },
     "gujora-climax-v02-audio": {
       "cache": false,
       "executor": "nx:run-commands",

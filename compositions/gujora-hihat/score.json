@@ -1,0 +1,221 @@
+{
+  "duration": 30,
+  "bpm": 60,
+  "seed": 20261103,
+  "pattern": "one hi-hat each 1 second",
+  "timing": "Strudel queryArc(0,30), one-second cycles with a 250ms offset and deterministic ±10ms variation",
+  "strudelExpression": "note(mini(\"0\"))",
+  "events": [
+    {
+      "track": "hat",
+      "beat": 0,
+      "gridSeconds": 0,
+      "timeSeconds": 0.249514,
+      "velocity": 0.26
+    },
+    {
+      "track": "hat",
+      "beat": 1,
+      "gridSeconds": 1,
+      "timeSeconds": 1.252141,
+      "velocity": 0.2
+    },
+    {
+      "track": "hat",
+      "beat": 2,
+      "gridSeconds": 2,
+      "timeSeconds": 2.253007,
+      "velocity": 0.26
+    },
+    {
+      "track": "hat",
+      "beat": 3,
+      "gridSeconds": 3,
+      "timeSeconds": 3.241405,
+      "velocity": 0.2
+    },
+    {
+      "track": "hat",
+      "beat": 4,
+      "gridSeconds": 4,
+      "timeSeconds": 4.257575,
+      "velocity": 0.26
+    },
+    {
+      "track": "hat",
+      "beat": 5,
+      "gridSeconds": 5,
+      "timeSeconds": 5.250281,
+      "velocity": 0.2
+    },
+    {
+      "track": "hat",
+      "beat": 6,
+      "gridSeconds": 6,
+      "timeSeconds": 6.241031,
+      "velocity": 0.26
+    },
+    {
+      "track": "hat",
+      "beat": 7,
+      "gridSeconds": 7,
+      "timeSeconds": 7.24325,
+      "velocity": 0.2
+    },
+    {
+      "track": "hat",
+      "beat": 8,
+      "gridSeconds": 8,
+      "timeSeconds": 8.244471,
+      "velocity": 0.26
+    },
+    {
+      "track": "hat",
+      "beat": 9,
+      "gridSeconds": 9,
+      "timeSeconds": 9.248536,
+      "velocity": 0.2
+    },
+    {
+      "track": "hat",
+      "beat": 10,
+      "gridSeconds": 10,
+      "timeSeconds": 10.257832,
+      "velocity": 0.26
+    },
+    {
+      "track": "hat",
+      "beat": 11,
+      "gridSeconds": 11,
+      "timeSeconds": 11.252892,
+      "velocity": 0.2
+    },
+    {
+      "track": "hat",
+      "beat": 12,
+      "gridSeconds": 12,
+      "timeSeconds": 12.255384,
+      "velocity": 0.26
+    },
+    {
+      "track": "hat",
+      "beat": 13,
+      "gridSeconds": 13,
+      "timeSeconds": 13.255493,
+      "velocity": 0.2
+    },
+    {
+      "track": "hat",
+      "beat": 14,
+      "gridSeconds": 14,
+      "timeSeconds": 14.247531,
+      "velocity": 0.26
+    },
+    {
+      "track": "hat",
+      "beat": 15,
+      "gridSeconds": 15,
+      "timeSeconds": 15.257224,
+      "velocity": 0.2
+    },
+    {
+      "track": "hat",
+      "beat": 16,
+      "gridSeconds": 16,
+      "timeSeconds": 16.259554,
+      "velocity": 0.26
+    },
+    {
+      "track": "hat",
+      "beat": 17,
+      "gridSeconds": 17,
+      "timeSeconds": 17.247793,
+      "velocity": 0.2
+    },
+    {
+      "track": "hat",
+      "beat": 18,
+      "gridSeconds": 18,
+      "timeSeconds": 18.257467,
+      "velocity": 0.26
+    },
+    {
+      "track": "hat",
+      "beat": 19,
+      "gridSeconds": 19,
+      "timeSeconds": 19.246216,
+      "velocity": 0.2
+    },
+    {
+      "track": "hat",
+      "beat": 20,
+      "gridSeconds": 20,
+      "timeSeconds": 20.241984,
+      "velocity": 0.26
+    },
+    {
+      "track": "hat",
+      "beat": 21,
+      "gridSeconds": 21,
+      "timeSeconds": 21.25167,
+      "velocity": 0.2
+    },
+    {
+      "track": "hat",
+      "beat": 22,
+      "gridSeconds": 22,
+      "timeSeconds": 22.240152,
+      "velocity": 0.26
+    },
+    {
+      "track": "hat",
+      "beat": 23,
+      "gridSeconds": 23,
+      "timeSeconds": 23.242638,
+      "velocity": 0.2
+    },
+    {
+      "track": "hat",
+      "beat": 24,
+      "gridSeconds": 24,
+      "timeSeconds": 24.246655,
+      "velocity": 0.26
+    },
+    {
+      "track": "hat",
+      "beat": 25,
+      "gridSeconds": 25,
+      "timeSeconds": 25.24405,
+      "velocity": 0.2
+    },
+    {
+      "track": "hat",
+      "beat": 26,
+      "gridSeconds": 26,
+      "timeSeconds": 26.259375,
+      "velocity": 0.26
+    },
+    {
+      "track": "hat",
+      "beat": 27,
+      "gridSeconds": 27,
+      "timeSeconds": 27.255852,
+      "velocity": 0.2
+    },
+    {
+      "track": "hat",
+      "beat": 28,
+      "gridSeconds": 28,
+      "timeSeconds": 28.242797,
+      "velocity": 0.26
+    },
+    {
+      "track": "hat",
+      "beat": 29,
+      "gridSeconds": 29,
+      "timeSeconds": 29.243507,
+      "velocity": 0.2
+    }
+  ],
+  "generatorSha256": "d4a7aee042084d09ea2d5dc2aeea1395d65f69c97478e19f4196bff9b091ec82"
+}
